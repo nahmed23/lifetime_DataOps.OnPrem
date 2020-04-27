@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberAssociation AS 
+SELECT MemberAssociationID,MemberID,AssociatedMemberID,ValMemberAssociationTypeID,ValRelationshipTypeID,EffectiveStartDateTime,EffectiveEndDateTime,LastUpdatedEmployeeID,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.MemberAssociation WITH(NOLOCK)

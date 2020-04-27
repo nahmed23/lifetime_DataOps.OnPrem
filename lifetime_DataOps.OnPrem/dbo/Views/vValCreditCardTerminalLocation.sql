@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValCreditCardTerminalLocation AS 
+SELECT ValCreditCardTerminalLocationID,Description,SortOrder,AvailableForIntranetTerminalFlag
+FROM MMS.dbo.ValCreditCardTerminalLocation WITH(NOLOCK)

@@ -1,0 +1,2 @@
+﻿CREATE USER [Boss] FOR LOGIN [Boss];
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [LTFINC\SEC-DB-SQLDev-Elevated] FOR LOGIN [LTFINC\SEC-DB-SQLDev-Elevated];
+

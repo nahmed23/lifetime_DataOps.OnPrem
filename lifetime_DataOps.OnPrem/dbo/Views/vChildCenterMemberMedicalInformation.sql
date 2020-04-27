@@ -1,0 +1,5 @@
+﻿
+CREATE VIEW dbo.vChildCenterMemberMedicalInformation AS 
+SELECT ChildCenterMemberMedicalInformationID,MemberID,NickName,Allergies,MedicalConditions,Immunizations,PhysicianName,PhysicianAreaCode,PhysicianNumber
+FROM MMS.dbo.ChildCenterMemberMedicalInformation With(NoLock)
+

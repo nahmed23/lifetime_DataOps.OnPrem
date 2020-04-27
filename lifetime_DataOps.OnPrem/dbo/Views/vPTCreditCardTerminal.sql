@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPTCreditCardTerminal AS 
+SELECT PTCreditCardTerminalID,Name,Description,ValPTCreditCardClientNumberID,MerchantNumber,TerminalNumber,ClubID,ValCreditCardTerminalLocationID,DrawerID,TerminalAreaID,TerminalStatus,EmployeeID
+FROM MMS.dbo.PTCreditCardTerminal WITH(NOLOCK)

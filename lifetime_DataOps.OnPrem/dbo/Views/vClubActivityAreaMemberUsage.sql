@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vClubActivityAreaMemberUsage AS 
+SELECT ClubActivityAreaMemberUsageID,ClubID,ValActivityAreaID,MemberID,UsageDateTime,UTCUsageDateTime,UsageDateTimeZone
+FROM MMS.dbo.ClubActivityAreaMemberUsage WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProductWelcomeEmailDatapoint AS 
+SELECT ProductWelcomeEmailDatapointID,ProductWelcomeEmailID,DataPoint,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ProductWelcomeEmailDatapoint WITH(NOLOCK)

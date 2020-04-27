@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberAttribute AS 
+SELECT MemberAttributeID,MemberID,AttributeValue,ValMemberAttributeTypeID,ExpirationDate,InsertedDateTime,UpdatedDateTime,EffectiveFromDateTime,EffectiveThruDateTime
+FROM MMS.dbo.MemberAttribute WITH(NOLOCK)

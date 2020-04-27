@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vEFT AS 
+SELECT EFTID,MembershipID,ValEFTStatusID,EFTReturnCodeID,AccountNumber,AccountOwner,RoutingNumber,ExpirationDate,EFTDate,PaymentID,ReturnCode,ValEFTTypeID,EFTAmount,ValPaymentTypeID,MemberID,Job_Task_ID,MaskedAccountNumber,MaskedAccountNumber64,InsertedDateTime,UpdatedDateTime,DuesAmountUsedForProducts,EFTAmountProducts,OrderNumber,Token,ValEFTAccountTypeID,SurchargeAmount
+FROM MMS_Archive.dbo.EFT WITH(NOLOCK)

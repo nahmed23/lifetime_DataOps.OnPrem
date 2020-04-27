@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vDelinquentMembership AS 
+SELECT DelinquentMembershipID,MembershipID,BalanceAmount,DelinquentDateTime,UTCDelinquentDateTime,DelinquentDateTimeZone
+FROM MMS.dbo.DelinquentMembership WITH(NOLOCK)

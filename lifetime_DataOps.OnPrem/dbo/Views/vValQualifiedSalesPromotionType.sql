@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValQualifiedSalesPromotionType AS 
+SELECT ValQualifiedSalesPromotionTypeID,Description,SortOrder,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ValQualifiedSalesPromotionType WITH(NOLOCK)

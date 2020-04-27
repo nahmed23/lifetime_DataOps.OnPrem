@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProductOnboardSetProduct AS 
+SELECT ProductOnboardSetProductID,ProductOnboardSetID,ProductID,Quantity,InsertedDateTime,UpdatedDateTime,RecurrentProductFlag
+FROM MMS.dbo.ProductOnboardSetProduct WITH(NOLOCK)

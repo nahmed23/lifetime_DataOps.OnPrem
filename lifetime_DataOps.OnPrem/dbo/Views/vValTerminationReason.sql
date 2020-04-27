@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValTerminationReason AS 
+SELECT ValTerminationReasonID,Description,SortOrder,InsertedDateTime,UpdatedDateTime,DisplayUIFlag,AdditionalReasonDisplayUIFlag
+FROM MMS.dbo.ValTerminationReason WITH(NOLOCK)

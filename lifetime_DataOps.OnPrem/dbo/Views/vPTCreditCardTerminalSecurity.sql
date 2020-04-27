@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPTCreditCardTerminalSecurity AS 
+SELECT PTCreditCardTerminalSecurityID,PTCreditCardTerminalID,SecurityGroup,ValCreditCardBatchAccessID
+FROM MMS.dbo.PTCreditCardTerminalSecurity WITH(NOLOCK)

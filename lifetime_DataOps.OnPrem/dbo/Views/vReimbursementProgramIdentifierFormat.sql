@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vReimbursementProgramIdentifierFormat AS 
+SELECT ReimbursementProgramIdentifierFormatID,ReimbursementProgramID,Description,ActiveFlag,InsertedDateTime,UpdatedDateTime,ImageURL,ImageDescription,SortOrder,ValProgramIdentifierValidationClassID
+FROM MMS.dbo.ReimbursementProgramIdentifierFormat WITH(NOLOCK)

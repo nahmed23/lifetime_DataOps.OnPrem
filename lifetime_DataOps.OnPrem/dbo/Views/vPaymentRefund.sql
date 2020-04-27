@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPaymentRefund AS 
+SELECT PaymentRefundID,PaymentID,ValPaymentStatusID,StatusChangeDateTime,UTCStatusChangeDateTime,StatusChangeDateTimeZone,StatusChangeEmployeeID,PaymentIssuedDateTime,Comment,ReferenceNumber
+FROM MMS_Archive.dbo.PaymentRefund WITH(NOLOCK)

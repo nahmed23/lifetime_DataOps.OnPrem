@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "lifetime_DataOps.OnPrem", "lifetime_DataOps.OnPrem\lifetime_DataOps.OnPrem.sqlproj", "{A10D6DA4-65B0-4510-849D-2306661A8AB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10D6DA4-65B0-4510-849D-2306661A8AB4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7DE95CA-A76D-49B2-A0CB-940F3EE5DE13}
+	EndGlobalSection
+EndGlobal

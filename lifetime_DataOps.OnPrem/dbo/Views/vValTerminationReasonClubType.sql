@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValTerminationReasonClubType AS 
+SELECT ValTerminationReasonClubTypeID,Description,SortOrder,InsertedDateTime,UpdatedDateTime,DisplayUIFlag
+FROM MMS.dbo.ValTerminationReasonClubType WITH(NOLOCK)

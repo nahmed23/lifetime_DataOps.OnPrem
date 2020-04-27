@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValPTCreditCardAuthorizationNetWork AS 
+SELECT ValPTCreditCardAuthorizationNetWorkID,Description,SortOrder,AuthorizationNetWorkID
+FROM MMS.dbo.ValPTCreditCardAuthorizationNetWork WITH(NOLOCK)

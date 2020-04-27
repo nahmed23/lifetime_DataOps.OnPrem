@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMIPCategoryItem AS 
+SELECT MIPCategoryItemID,ValMIPCategoryID,ValMIPSubCategoryID,ValMIPItemID,ActiveFlag,AllowCommentFlag,SortOrder,InsertedDateTime,UpdatedDateTime,ValMIPInterestCategoryID,ProspectEnabledFlag
+FROM MMS.dbo.MIPCategoryItem WITH(NOLOCK)

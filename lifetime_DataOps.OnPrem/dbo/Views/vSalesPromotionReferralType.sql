@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSalesPromotionReferralType AS 
+SELECT SalesPromotionReferralTypeID,QualifiedSalesPromotionID,ReferralDaysWindow,JoinDaysWindow,JoinEndDate,InsertedDateTime,UpdatedDateTime,MinimumQualifyingJoinFee,QualifyingStartDate,QualifyingEndDate
+FROM MMS.dbo.SalesPromotionReferralType WITH(NOLOCK)

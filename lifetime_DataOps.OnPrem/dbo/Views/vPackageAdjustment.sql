@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPackageAdjustment AS 
+SELECT PackageAdjustmentID,PackageID,AdjustedDateTime,UTCAdjustedDateTime,AdjustedDateTimeZone,EmployeeID,MMSTranID,SessionsAdjusted,AmountAdjusted,Comment,ValPackageAdjustmentTypeID,InsertedDateTime,UpdatedDateTime
+FROM MMS_Archive.dbo.PackageAdjustment WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [GISuser]
+    AUTHORIZATION [GISuser];
+

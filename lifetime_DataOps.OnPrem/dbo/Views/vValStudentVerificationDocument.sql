@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValStudentVerificationDocument AS 
+SELECT ValStudentVerificationDocumentID,Description,SortOrder,InsertedDateTime,UpdatedDateTime,DisplayUIFlag
+FROM MMS.dbo.ValStudentVerificationDocument WITH(NOLOCK)

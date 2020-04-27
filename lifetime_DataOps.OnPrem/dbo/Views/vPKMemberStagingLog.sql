@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPKMemberStagingLog AS 
+SELECT PKMemberStagingID,PKMembershipStagingID,MMSMemberID,ValNamePrefixID,FirstName,MiddleName,LastName,ValNameSuffixID,DOB,Gender,SSN,EmailAddress,Comment,ValMemberTypeID,NoEmail,ProofOfCohabitation,IsPurchaser,UpdatedDateTime,CWMedicaNumber,PKCreditCardAccountStagingID,SiebelRow_ID,Salesforce_Prospect_ID,Party_ID,CreateMyLTAccountFlag,Salesforce_Contact_ID
+FROM MMS.dbo.PKMemberStagingLog WITH(NOLOCK)

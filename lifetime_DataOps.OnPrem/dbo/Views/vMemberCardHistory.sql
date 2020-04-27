@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberCardHistory AS 
+SELECT MemberCardHistoryID,MemberID,Name,MemberCardDesignID,EmployeeID,ClubID,PrintDateTime,UTCPrintDateTime,PrintDateTimeZone,MemberFlag,InsertedDateTime,UpdatedDateTime,ValMemberCardStatusID,ValMemberCardTypeID,ValMemberCardLetterTypeID,RequestDateTime,UTCRequestDateTime,RequestDateTimeZone,TrackShipmentFlag,LastUpdatedDateTime,UTCLastUpdatedDateTime,LastUpdatedDateTimeZone,ValCardLevelID
+FROM MMS_Archive.dbo.MemberCardHistory WITH(NOLOCK)

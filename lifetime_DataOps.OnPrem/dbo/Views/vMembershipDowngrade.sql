@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMembershipDowngrade AS 
+SELECT MembershipDowngradeID,Description,DefaultFlag,BronzeMembershipTypeID,GoldMembershipTypeID,PlatinumMembershipTypeID,OnyxMembershipTypeID,DiamondMembershipTypeID,FoundersMembershipTypeID,CampaignID,SegmentID,ValMembershipMessageTypeID,ValContractTypeID,InsertedDateTime,UpdatedDateTime,EmailKey,Alpha1MembershipTypeID,OnyxLimitedMembershipTypeID,OnyxPremierMembershipTypeID
+FROM MMS.dbo.MembershipDowngrade WITH(NOLOCK)

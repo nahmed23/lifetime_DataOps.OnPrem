@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMembershipMessage AS 
+SELECT MembershipMessageID,MembershipID,OpenEmployeeID,CloseEmployeeID,OpenDateTime,CloseDateTime,ValMembershipMessageTypeID,ValMessageStatusID,ReceivedDateTime,Comment,UTCOpenDateTime,OpenDateTimeZone,UTCCloseDateTime,CloseDateTimeZone,UTCReceivedDateTime,ReceivedDateTimeZone,OpenClubID,CloseClubID
+FROM MMS_Archive.dbo.MembershipMessage WITH(NOLOCK)

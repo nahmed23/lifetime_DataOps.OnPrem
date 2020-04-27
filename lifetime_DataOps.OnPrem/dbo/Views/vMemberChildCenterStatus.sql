@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberChildCenterStatus AS 
+SELECT MemberChildCenterStatusID,MemberID,DisableChildCenterUsageFlag,EnableChildCenterUsageDate,Comment,CommentUpdatedDateTime,UTCCommentUpdatedDateTime,CommentUpdatedDateTimeZone,InsertedDatetime,UpdatedDateTime,KPClimbingWaiverSignedDate,KPParticipationAgreementSignedDate,ThirdHourCareAccessFlag
+FROM MMS.dbo.MemberChildCenterStatus WITH(NOLOCK)

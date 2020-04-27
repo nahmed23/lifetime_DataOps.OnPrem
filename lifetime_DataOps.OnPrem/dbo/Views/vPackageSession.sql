@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPackageSession AS 
+SELECT PackageSessionID,PackageID,CreatedDateTime,UTCCreatedDateTime,CreatedDateTimeZone,ModifiedDateTime,UTCModifiedDateTime,ModifiedDateTimeZone,DeliveredDateTime,UTCDeliveredDateTime,DeliveredDateTimeZone,CreatedEmployeeID,ModifiedEmployeeID,DeliveredEmployeeID,ClubID,SessionPrice,Comment,InsertedDateTime,UpdatedDateTime,MMSTranID,ExerpUsageID
+FROM MMS_Archive.dbo.PackageSession WITH(NOLOCK)

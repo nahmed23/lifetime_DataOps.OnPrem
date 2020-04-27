@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vDrawerActivityAmount AS 
+SELECT DrawerActivityAmountID,DrawerActivityID,TranTotalAmount,ActualTotalAmount,ValPaymentTypeID,InsertedDateTime,UpdatedDateTime,ValCurrencyCodeID
+FROM MMS.dbo.DrawerActivityAmount WITH(NOLOCK)

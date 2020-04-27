@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [LTFINC\Alteryxsvc]
+    AUTHORIZATION [LTFINC\Alteryxsvc];
+

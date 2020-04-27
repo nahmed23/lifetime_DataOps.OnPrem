@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSubsidyCompanyReimbursementProgramQualification AS 
+SELECT SubsidyCompanyReimbursementProgramQualificationID,SubsidyCompanyReimbursementProgramID,BatchNumber,RecordsSent,DuesMonth,ProcessedDateTime,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.SubsidyCompanyReimbursementProgramQualification WITH(NOLOCK)

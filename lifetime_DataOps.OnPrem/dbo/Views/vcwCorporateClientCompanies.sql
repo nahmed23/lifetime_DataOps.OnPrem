@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vcwCorporateClientCompanies AS 
+SELECT CorporateAccountNumber,CompanyName,CorporateSalespeopleID,CorpSalespersonInitials,PrintUsageReportFlag,State,DateStart,DateEnd,InitPercentage,CorporateSalesperson,InitiationFee,InvoiceFlag,DollarDiscount
+FROM MMS.dbo.cwCorporateClientCompanies WITH(NOLOCK)

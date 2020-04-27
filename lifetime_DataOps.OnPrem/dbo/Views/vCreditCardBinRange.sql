@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vCreditCardBinRange AS 
+SELECT CreditCardBinRangeID,ValBinRangeTypeID,ValPaymentTypeID,BinRangeLow,BinRangeHigh,MaximumAccountNumberLength,PinCapableFlag,BinUpdatedDateTime,InsertedDateTime,UpdatedDateTime,BinRangeLowInt,BinRangeHighInt,ValBinRangeSourceID
+FROM MMS.dbo.CreditCardBinRange WITH(NOLOCK)

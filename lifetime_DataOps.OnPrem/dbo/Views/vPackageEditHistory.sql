@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPackageEditHistory AS 
+SELECT PackageEditHistoryID,PackageID,MemberID,MembershipID,ClubID,NumberOfSessions,PricePerSession,EmployeeID,ValPackageStatusID,MMSTranID,ProductID,TranItemID,CreatedDateTime,UTCCreatedDateTime,CreatedDateTimeZone,SessionsLeft,BalanceAmount,InsertedDateTime,UpdatedDateTime,PackageEditDateTime,UTCPackageEditDateTime,PackageEditDateTimeZone,ExpirationDateTime
+FROM MMS_Archive.dbo.PackageEditHistory WITH(NOLOCK)

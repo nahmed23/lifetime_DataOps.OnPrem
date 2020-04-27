@@ -1,0 +1,1727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>lifetime_DataOps.OnPrem</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a10d6da4-65b0-4510-849d-2306661a8ab4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>lifetime_DataOps.OnPrem</RootNamespace>
+    <AssemblyName>lifetime_DataOps.OnPrem</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="LTFINC_e9002794\" />
+    <Folder Include="LTFINC_e9002794\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\tmpPromotionPackageAdd.sql" />
+    <Build Include="dbo\Tables\ValRevenueAllocationProductGroup.sql" />
+    <Build Include="LTFINC_e9002794\Tables\ResubmitMemberList.sql" />
+    <Build Include="dbo\Tables\zzzUsageTransfer2013.sql" />
+    <Build Include="dbo\Tables\RevenueAllocationRates.sql" />
+    <Build Include="dbo\Tables\HyperionReportLog.sql" />
+    <Build Include="dbo\Tables\ProductGroupByClub.sql" />
+    <Build Include="dbo\Tables\BDMClubs.sql" />
+    <Build Include="dbo\Tables\CorporateDiscountwDate.sql" />
+    <Build Include="dbo\Tables\MembershipTrack.sql" />
+    <Build Include="dbo\Tables\tmpMissingPaymentID_20130320.sql" />
+    <Build Include="dbo\Tables\tmpMissingPaymentRecord_20130320.sql" />
+    <Build Include="dbo\Tables\MapInfoMembershipAddress.sql" />
+    <Build Include="dbo\Tables\tmpLTFUserIdentity.sql" />
+    <Build Include="dbo\Tables\LastProcessedDateTime.sql" />
+    <Build Include="dbo\Tables\tmpNonUsageMembers.sql" />
+    <Build Include="dbo\Tables\ValBinRangeSource.sql" />
+    <Build Include="dbo\Tables\tmpSiebelMembers.sql" />
+    <Build Include="dbo\Tables\DeferredRevenueAllocationSummary.sql" />
+    <Build Include="dbo\Tables\tmpMemberReimbursementHistory.sql" />
+    <Build Include="dbo\Tables\ADD_UPDATE_FLAG.sql" />
+    <Build Include="dbo\Tables\tmpMAMapping.sql" />
+    <Build Include="dbo\Tables\MonthlyAverageExchangeRate.sql" />
+    <Build Include="dbo\Tables\ReimbursementProgramParticipationDetail.sql" />
+    <Build Include="dbo\Tables\PlanExchangeRate.sql" />
+    <Build Include="dbo\Tables\ReimbursementProgramParticipationSummary.sql" />
+    <Build Include="dbo\Tables\LongRunningSQL5.sql" />
+    <Build Include="dbo\Tables\ReportDimProduct.sql" />
+    <Build Include="dbo\Tables\AcquisitionMember.sql" />
+    <Build Include="dbo\Tables\ReportDimReportingHierarchyHistory_UDW.sql" />
+    <Build Include="dbo\Tables\tmpMembershipShift.sql" />
+    <Build Include="dbo\Tables\ReportDimClubHistory_UDW.sql" />
+    <Build Include="dbo\Tables\ReportDimReportingHierarchy.sql" />
+    <Build Include="dbo\Tables\tmpTrans.sql" />
+    <Build Include="dbo\Tables\ValPTProductGroup.sql" />
+    <Build Include="dbo\Tables\zzzLFFMarchRefunds.sql" />
+    <Build Include="dbo\Tables\PTProductGroup.sql" />
+    <Build Include="dbo\Tables\Times.sql" />
+    <Build Include="dbo\Tables\DSSRCashReductionSummary.sql" />
+    <Build Include="dbo\Tables\DelinquentMembershipBalance_BeginningOfMonth.sql" />
+    <Build Include="dbo\Tables\tmpLifeLabOrder.sql" />
+    <Build Include="dbo\Tables\ReportDimRevenueAllocationRule.sql" />
+    <Build Include="dbo\Tables\tmpPrimaryEmployeeRole.sql" />
+    <Build Include="dbo\Tables\tmpNPTMembershipsList.sql" />
+    <Build Include="dbo\Tables\PTOneOnOneRevenue.sql" />
+    <Build Include="dbo\Tables\tmpmembershipbalance.sql" />
+    <Build Include="dbo\Tables\CorporateDiscount.sql" />
+    <Build Include="dbo\Tables\DSSRAdvisorMembershipTotalsSummary.sql" />
+    <Build Include="dbo\Tables\DSSRSportsNonAccessSummary.sql" />
+    <Build Include="dbo\Tables\DSSRSummary.sql" />
+    <Build Include="dbo\Tables\ReportDimDate.sql" />
+    <Build Include="dbo\Tables\tmpPromotionPackageAdd_20180507.sql" />
+    <Build Include="dbo\Tables\AuditQuery.sql" />
+    <Build Include="dbo\Tables\TempRevenue.sql" />
+    <Build Include="dbo\Tables\PTProductGroupRevenue.sql" />
+    <Build Include="dbo\Tables\MMSRevenueReportSummary.sql" />
+    <Build Include="dbo\Tables\LongRunningSQL6.sql" />
+    <Build Include="dbo\Tables\MMSRevenueGLPostingSummary_int_pk.sql" />
+    <Build Include="dbo\Tables\TEAMEmployeeProductHistory.sql" />
+    <Build Include="dbo\Tables\MMSCommissionableSalesSummary.sql" />
+    <Build Include="dbo\Tables\LongRunningSQL7.sql" />
+    <Build Include="dbo\Tables\LongRunningSQL8.sql" />
+    <Build Include="dbo\Tables\MMSRevenueGLPostingSummary.sql" />
+    <Build Include="dbo\Tables\ProductGroup.sql" />
+    <Build Include="dbo\Tables\ValProductGroup.sql" />
+    <Build Include="dbo\Tables\zzzECommMembers.sql" />
+    <Build Include="dbo\Tables\ValMemberActivitiesProductGroup.sql" />
+    <Build Include="dbo\Views\vValTerminationReason.sql" />
+    <Build Include="dbo\Views\vValClubAttributeType.sql" />
+    <Build Include="dbo\Views\vClubPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMIPCategoryItemDepartmentUnit.sql" />
+    <Build Include="dbo\Views\vPKCreditCardAccountStaging.sql" />
+    <Build Include="dbo\Views\vClubProduct.sql" />
+    <Build Include="dbo\Views\vPKCreditCardAccountStagingLog.sql" />
+    <Build Include="dbo\Views\vValPaymentStatus.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValTranType.sql" />
+    <Build Include="dbo\Views\vReimbursementProgramNotification.sql" />
+    <Build Include="dbo\Views\vProductPKOptions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubProductAll.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPaymentAccount.sql" />
+    <Build Include="dbo\Views\vValRefundApprovalReason.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValUnitType.sql" />
+    <Build Include="dbo\Views\vValFirstMonthDuesType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubProductPKPrice.sql" />
+    <Build Include="dbo\Views\vMembershipMessage.sql" />
+    <Build Include="dbo\Views\vProductSalesChannel.sql" />
+    <Build Include="dbo\Views\vMemberActivityAreaSkillHistory.sql" />
+    <Build Include="dbo\Views\vValMemberCardCode.sql" />
+    <Build Include="dbo\Views\vDataDictionary.sql" />
+    <Build Include="dbo\Views\vEmployeeStatus.sql" />
+    <Build Include="dbo\Views\vTranItemRefund.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vCommissionSplit.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vProductSalesChannelClub.sql" />
+    <Build Include="dbo\Views\vKidsPlayCheckIn.sql" />
+    <Build Include="dbo\Views\vValMemberCardStatus.sql" />
+    <Build Include="dbo\Views\vMMSTranRefundMMSTran.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vCommissionSplitCalc.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubProductTaxRate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipOffering.sql" />
+    <Build Include="dbo\Views\vValMemberCardType.sql" />
+    <Build Include="dbo\Views\vPaymentRefund.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValPricingRule.sql" />
+    <Build Include="dbo\Views\vClubSelect.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipOfferingSalesChannel.sql" />
+    <Build Include="dbo\Views\vMMSTranRefundApproval.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vDelinquentMembers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValRestrictedGroup.sql" />
+    <Build Include="dbo\Views\vClubService.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMMSTran.sql" />
+    <Build Include="dbo\Views\vMembershipOfferingSalesChannelClub.sql" />
+    <Build Include="dbo\Views\vPaymentRefundContact.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMIPCategoryItemDescription.sql" />
+    <Build Include="dbo\Views\vValQualifiedSalesPromotionType.sql" />
+    <Build Include="dbo\Views\vRecurrentProductMembershipStatus.sql" />
+    <Build Include="dbo\Views\vValWelcomeKitType.sql" />
+    <Build Include="dbo\Views\vMemberTermination.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vCompanyAddress.sql" />
+    <Build Include="dbo\Views\vQualifiedSalesPromotion.sql" />
+    <Build Include="dbo\Views\vMembershipType.sql" />
+    <Build Include="dbo\Views\vCompanyCWRegion.sql" />
+    <Build Include="dbo\Views\vCompanyPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValGuestAccessMethod.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vContact.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubPCINetwork.sql" />
+    <Build Include="dbo\Views\vContactAddress.sql" />
+    <Build Include="dbo\Views\vDelinquentMembership.sql" />
+    <Build Include="dbo\Views\vMembershipDowngrade.sql" />
+    <Build Include="dbo\Views\vContactPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubMembershipDowngrade.sql" />
+    <Build Include="dbo\Views\vWebItemMetaData.sql" />
+    <Build Include="dbo\Views\vMembershipTypeClubPolicy.sql" />
+    <Build Include="dbo\Views\vEFTReturnCode.sql" />
+    <Build Include="dbo\Views\vValBinRangeType.sql" />
+    <Build Include="dbo\Views\vDepartment.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValEmailTemplateType.sql" />
+    <Build Include="dbo\Views\vCognos_TodaysBusiness_MembershipCount.sql" />
+    <Build Include="dbo\Views\vCreditCardBinRange.sql" />
+    <Build Include="dbo\Views\vDepartmentMembershipMessageType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vWorkdayCostCenter.sql" />
+    <Build Include="dbo\Views\vWebCartPromotionCode.sql" />
+    <Build Include="dbo\Views\vMemberUsage.sql" />
+    <Build Include="dbo\Views\vMemberReimbursement.sql" />
+    <Build Include="dbo\Views\vValProductTierType.sql" />
+    <Build Include="dbo\Views\vValMembershipUpgradeDateRange.sql" />
+    <Build Include="dbo\Views\vWebOrderPromotionCode.sql" />
+    <Build Include="dbo\Views\vMemberReimbursementHistory.sql" />
+    <Build Include="dbo\Views\vProductTier.sql" />
+    <Build Include="dbo\Views\vMembershipModificationFlexReason.sql" />
+    <Build Include="dbo\Views\vSalesPromotionReferralType.sql" />
+    <Build Include="dbo\Views\vPKMemberInterestStaging.sql" />
+    <Build Include="dbo\Views\vClubProductTier.sql" />
+    <Build Include="dbo\Views\vDrawerActivityAmount.sql" />
+    <Build Include="dbo\Views\vPackage.sql" />
+    <Build Include="dbo\Views\vValAgreementAction.sql" />
+    <Build Include="dbo\Views\vSalesPromotionCode.sql" />
+    <Build Include="dbo\Views\vSaleCommission.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vCRMNPTMembership.sql" />
+    <Build Include="dbo\Views\vMembershipTypeAttribute.sql" />
+    <Build Include="dbo\Views\vMembershipProductTier.sql" />
+    <Build Include="dbo\Views\vDrawerActivityDates.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPackageEditHistory.sql" />
+    <Build Include="dbo\Views\vMembershipSalesPromotionCode.sql" />
+    <Build Include="dbo\Views\vProductTierPrice.sql" />
+    <Build Include="dbo\Views\vQualifiedSalesPromotionEmailTemplate.sql" />
+    <Build Include="dbo\Views\vTranItemTax.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPackageAdjustment.sql" />
+    <Build Include="dbo\Views\vProductWelcomeEmail.sql" />
+    <Build Include="dbo\Views\vEmailAddressStatus.sql" />
+    <Build Include="dbo\Views\vTranVoided.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValDiscountReason.sql" />
+    <Build Include="dbo\Views\vProductWelcomeEmailDatapoint.sql" />
+    <Build Include="dbo\Views\vEFTAccount.sql" />
+    <Build Include="dbo\Views\vCorporatePromotionNetwork.sql" />
+    <Build Include="dbo\Views\vEFTBatch.sql" />
+    <Build Include="dbo\Views\vMember.sql" />
+    <Build Include="dbo\Views\vReimbursementErrorCode.sql" />
+    <Build Include="dbo\Views\vEFTBatchClubDetail.sql" />
+    <Build Include="dbo\Views\vReimbursementProgram.sql" />
+    <Build Include="dbo\Views\vValRevenueAllocationProductGroup.sql" />
+    <Build Include="dbo\Views\vAutoShipAcknowledgementTotal.sql" />
+    <Build Include="dbo\Views\vDeletedData.sql" />
+    <Build Include="dbo\Views\vMembershipTrack.sql" />
+    <Build Include="dbo\Views\vProductOnboardRule.sql" />
+    <Build Include="dbo\Views\vReimbursementProgramIdentifierFormat.sql" />
+    <Build Include="dbo\Views\vRevenueAllocationRates.sql" />
+    <Build Include="dbo\Views\vFICOIntegrationKey.sql" />
+    <Build Include="dbo\Views\vProductOnboardRuleSet.sql" />
+    <Build Include="dbo\Views\vReimbursementProgramIdentifierFormatPart.sql" />
+    <Build Include="dbo\Views\vDeferredRevenueAllocationSummary.sql" />
+    <Build Include="dbo\Views\vPhoneNumberStatus.sql" />
+    <Build Include="dbo\Views\vBundleSubProduct.sql" />
+    <Build Include="dbo\Views\vReimbursementProgramRegion.sql" />
+    <Build Include="dbo\Views\vEmployeeAddress.sql" />
+    <Build Include="dbo\Views\vMembershipAddress.sql" />
+    <Build Include="dbo\Views\vEFTTokenRequest.sql" />
+    <Build Include="dbo\Views\vService.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vProductGroupByClub.sql" />
+    <Build Include="dbo\Views\vAutoShipAcknowledgementException.sql" />
+    <Build Include="dbo\Views\vEmployeePhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMapInfoMembershipAddress.sql" />
+    <Build Include="dbo\Views\vValAutoShipAction.sql" />
+    <Build Include="dbo\Views\vAutoShipAcknowledgementMember.sql" />
+    <Build Include="dbo\Views\vValBatchJobType.sql" />
+    <Build Include="dbo\Views\vEmployer.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vDepartmentUnit.sql" />
+    <Build Include="dbo\Views\vEmployerAddress.sql" />
+    <Build Include="dbo\Views\vDrawer.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMIPMemberDepartmentUnit.sql" />
+    <Build Include="dbo\Views\vGLAccount.sql" />
+    <Build Include="dbo\Views\vValMembershipMessageType.sql" />
+    <Build Include="dbo\Views\vMemberReimbursementProgramIdentifierPart.sql" />
+    <Build Include="dbo\Views\vMemberCardHistory.sql" />
+    <Build Include="dbo\Views\vEmployerPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPayment.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vLastProcessedDateTime.sql" />
+    <Build Include="dbo\Views\vValFlexReason.sql" />
+    <Build Include="dbo\Views\vValMembershipTypeAttribute.sql" />
+    <Build Include="dbo\Views\vClubProductSecurity.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vDrawerActivity.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValMembershipModificationRequestType.sql" />
+    <Build Include="dbo\Views\vMMSTranRefund.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValPackageAdjustmentType.sql" />
+    <Build Include="dbo\Views\vDrawerAudit.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipModificationRequest.sql" />
+    <Build Include="dbo\Views\vRefundMembershipSubtractItem.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValPackageStatus.sql" />
+    <Build Include="dbo\Views\vMIPMemberCategoryItemComment.sql" />
+    <Build Include="dbo\Views\vRefundMembershipSubtractTran.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValReimbursementTerminationReason.sql" />
+    <Build Include="dbo\Views\vTranPayment.sql" />
+    <Build Include="dbo\Views\vRefundMembershipPayment.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValProfitCenter.sql" />
+    <Build Include="dbo\Views\vValResourceUsageSourceType.sql" />
+    <Build Include="dbo\Views\vProfitCenterTerminal.sql" />
+    <Build Include="dbo\Views\vReimbursementErrorAction.sql" />
+    <Build Include="dbo\Views\vMedicaReimbursementProcess.sql" />
+    <Build Include="dbo\Views\vResourceUsage.sql" />
+    <Build Include="dbo\Views\vMailingListEmail.sql" />
+    <Build Include="dbo\Views\vValMembershipModificationRequestSource.sql" />
+    <Build Include="dbo\Views\vValRecurrentProductTerminationReason.sql" />
+    <Build Include="dbo\Views\vMedicaExportData.sql" />
+    <Build Include="dbo\Views\vTranBalance.sql" />
+    <Build Include="dbo\Views\vValRecurrentProductType.sql" />
+    <Build Include="dbo\Views\vPTCreditCardBatch.sql" />
+    <Build Include="dbo\Views\vValCurrencyCode.sql" />
+    <Build Include="dbo\Views\vMemberAttribute.sql" />
+    <Build Include="dbo\Views\vHRMMSClub.sql" />
+    <Build Include="dbo\Views\vValPeriodType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vChildCenterUsage.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValLTFKeyType.sql" />
+    <Build Include="dbo\Views\vValMemberAttributeType.sql" />
+    <Build Include="dbo\Views\vMemberCardVendor.sql" />
+    <Build Include="dbo\Views\vGuestPrivilegeRule.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMemberChildCenterStatus.sql" />
+    <Build Include="dbo\Views\vChildCenterUsageActivityArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vLTFKeyType.sql" />
+    <Build Include="dbo\Views\vPTCreditCardTerminalSecurity.sql" />
+    <Build Include="dbo\Views\vMemberPhoneNumbers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMemberPhotoCaptureHistory.sql" />
+    <Build Include="dbo\Views\vPTStoredValueCardTransaction.sql" />
+    <Build Include="dbo\Views\vMemberUsageNightClub.sql" />
+    <Build Include="dbo\Views\vDSSRSportsNonAccessSummary.sql" />
+    <Build Include="dbo\Views\vValCreditCardBatchAccess.sql" />
+    <Build Include="dbo\Views\vValBinRangeSource.sql" />
+    <Build Include="dbo\Views\vMMSCommissionableSalesSummary.sql" />
+    <Build Include="dbo\Views\vValCreditCardBatchStatus.sql" />
+    <Build Include="dbo\Views\vValProductGroup.sql" />
+    <Build Include="dbo\Views\vValCreditCardTerminalLocation.sql" />
+    <Build Include="dbo\Views\vValMemberActivityRegion.sql" />
+    <Build Include="dbo\Views\vValExactTargetMIPItem.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipBalance.sql" />
+    <Build Include="dbo\Views\vMembershipRecurrentProductTranItem.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardActionCode.sql" />
+    <Build Include="dbo\Views\vTerminalAreaIndustryCode.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipChildCenterStatus.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValPTCreditCardAuthorizationNetWork.sql" />
+    <Build Include="dbo\Views\vGuestVisit.sql" />
+    <Build Include="dbo\Views\vMembershipCommunicationPreference.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValMembershipModificationRequest.sql" />
+    <Build Include="dbo\Views\vValMIPInterestCategory.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValPTCreditCardAuthorizationSource.sql" />
+    <Build Include="dbo\Views\vMonthlyAverageExchangeRate.sql" />
+    <Build Include="dbo\Views\vProductGroup.sql" />
+    <Build Include="dbo\Views\vTranItem.sql" />
+    <Build Include="dbo\Views\vMIPCategoryItem.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardClientNumber.sql" />
+    <Build Include="dbo\Views\vDSSRAdvisorMembershipTotalsSummary.sql" />
+    <Build Include="dbo\Views\vMembershipMessageTypeMemberType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vReimbursementProgramParticipationDetail.sql" />
+    <Build Include="dbo\Views\vMIPMemberCategoryItem.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardEntryDataSource.sql" />
+    <Build Include="dbo\Views\vMembershipMessageTypeSecurityGroup.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vChildCenterMemberMedicalInformation.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardIndustryCode.sql" />
+    <Build Include="dbo\Views\vValRecurrentProductSource.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMembershipPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vReimbursementProgramParticipationSummary.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardTransactionCode.sql" />
+    <Build Include="dbo\Views\vMembershipRecurrentProduct.sql" />
+    <Build Include="dbo\Views\vValPTCreditCardType.sql" />
+    <Build Include="dbo\Views\vMembershipTypeClubAgreement.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPlanExchangeRate.sql" />
+    <Build Include="dbo\Views\vValSignatureStatus.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValCardLevel.sql" />
+    <Build Include="dbo\Views\vPackageSession.sql" />
+    <Build Include="dbo\Views\vPrimaryPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValReimbursementType.sql" />
+    <Build Include="dbo\Views\vThirdPartyPOSPayment.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValReimbursementUsageType.sql" />
+    <Build Include="dbo\Views\vEFTRefund.sql" />
+    <Build Include="dbo\Views\vExerpSessionUsage.sql" />
+    <Build Include="dbo\Views\vPurchaser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vSubsidyCompany.sql" />
+    <Build Include="dbo\Views\vSalesforceRole.sql" />
+    <Build Include="dbo\Views\vMailingListEmailSalesChannel.sql" />
+    <Build Include="dbo\Views\vPTCreditCardRejectedTransaction.sql" />
+    <Build Include="dbo\Views\vPurchaserAddress.sql" />
+    <Build Include="dbo\Views\vSubsidyCompanyReimbursementProgram.sql" />
+    <Build Include="dbo\Views\vPTCreditCardUndeliverableTransaction.sql" />
+    <Build Include="dbo\Views\vPurchaserPhone.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vSubsidyRule.sql" />
+    <Build Include="dbo\Views\vReportDimClubHistory_UDW.sql" />
+    <Build Include="dbo\Views\vPartitionFileGroupDetail.sql" />
+    <Build Include="dbo\Views\vMemberCardDesign.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vReasonCode.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vSubsidyRuleUsageTier.sql" />
+    <Build Include="dbo\Views\vReportDimReportingHierarchyHistory_UDW.sql" />
+    <Build Include="dbo\Views\vPartitionObjectDetail.sql" />
+    <Build Include="dbo\Views\vPOSDrawerDetail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vInitiationFee.sql" />
+    <Build Include="dbo\Views\vSubsidyRuleReimbursementType.sql" />
+    <Build Include="dbo\Views\vScheduledJob.sql" />
+    <Build Include="dbo\Views\vSubsidyCompanyReimbursementProgramNotEligible.sql" />
+    <Build Include="dbo\Views\vInternetMembership.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vReportDimReportingHierarchy.sql" />
+    <Build Include="dbo\Views\vValStudentVerificationDocument.sql" />
+    <Build Include="dbo\Views\vScheduledJobParameter.sql" />
+    <Build Include="dbo\Views\vSubsidyCompanyReimbursementProgramQualification.sql" />
+    <Build Include="dbo\Views\vMemberWithJuniors.sql" />
+    <Build Include="dbo\Views\vValAgeVerificationDocument.sql" />
+    <Build Include="dbo\Views\vSecurityGroupEmployeeRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vSubsidyCompanyReimbursementProgramTransaction.sql" />
+    <Build Include="dbo\Views\vMailingListEmailProduct.sql" />
+    <Build Include="dbo\Views\vServerName.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vSubsidyCompanyTransactionSummary.sql" />
+    <Build Include="dbo\Views\vMembershipRecurrentProductHistory.sql" />
+    <Build Include="dbo\Views\vValEmployeeRoleGroup.sql" />
+    <Build Include="dbo\Views\vcwCorporateClientCompanies.sql" />
+    <Build Include="dbo\Views\vSettlementAccount.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vEmployeeRoleGroup.sql" />
+    <Build Include="dbo\Views\vProgramNetworkType.sql" />
+    <Build Include="dbo\Views\vValPTProductGroup.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vStatementAddress.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValTerminationReasonClubType.sql" />
+    <Build Include="dbo\Views\vProgramNetworkClubMembershipType.sql" />
+    <Build Include="dbo\Views\vPTProductGroup.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vStatementMessage.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vCRMSecurityRole.sql" />
+    <Build Include="dbo\Views\vDSSRSummary.sql" />
+    <Build Include="dbo\Views\vProgramNetworkEligibleMember.sql" />
+    <Build Include="dbo\Views\vTaxRate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValAccessRestriction.sql" />
+    <Build Include="dbo\Views\vPostalAddress.sql" />
+    <Build Include="dbo\Views\vProgramNetworkTypeRate.sql" />
+    <Build Include="dbo\Views\vTemplate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vLTFAcquisitionType.sql" />
+    <Build Include="dbo\Views\vLTFEBParty.sql" />
+    <Build Include="dbo\Views\vProgramNetworkEligibleMemberDate.sql" />
+    <Build Include="dbo\Views\vLTFKey.sql" />
+    <Build Include="dbo\Views\vCreditCardUser.sql" />
+    <Build Include="dbo\Views\vValMembershipAttributeType.sql" />
+    <Build Include="dbo\Views\vProgramNetwork.sql" />
+    <Build Include="dbo\Views\vLTFLock.sql" />
+    <Build Include="dbo\Views\vCreditCardAccountAudit.sql" />
+    <Build Include="dbo\Views\vMemberAccountBalance.sql" />
+    <Build Include="dbo\Views\vMembershipAttribute.sql" />
+    <Build Include="dbo\Views\vProgramNetworkMember.sql" />
+    <Build Include="dbo\Views\vLTFResource.sql" />
+    <Build Include="dbo\Views\vMedicaCompany.sql" />
+    <Build Include="dbo\Views\vCreditCardAddress.sql" />
+    <Build Include="dbo\Views\vProductOnboardSetProduct.sql" />
+    <Build Include="dbo\Views\vLTFLockKey.sql" />
+    <Build Include="dbo\Views\vBankAddress.sql" />
+    <Build Include="dbo\Views\vProductOnboard.sql" />
+    <Build Include="dbo\Views\vUniqueTranBalance.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValKeyAction.sql" />
+    <Build Include="dbo\Views\vProductOnboardSet.sql" />
+    <Build Include="dbo\Views\vValActivityArea.sql" />
+    <Build Include="dbo\Views\vLTFKeyAcquisition.sql" />
+    <Build Include="dbo\Views\vMemberAgreementStaging.sql" />
+    <Build Include="dbo\Views\vValAddressType.sql" />
+    <Build Include="dbo\Views\vLTFResourceLock.sql" />
+    <Build Include="dbo\Views\vEmployeeRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValCWRegion.sql" />
+    <Build Include="dbo\Views\vLTFResourceLockList.sql" />
+    <Build Include="dbo\Views\vEmployee.sql" />
+    <Build Include="dbo\Views\vValCheckInGroup.sql" />
+    <Build Include="dbo\Views\vLTFKeyOwner.sql" />
+    <Build Include="dbo\Views\vValEmployeeRole.sql" />
+    <Build Include="dbo\Views\vReportDimRevenueAllocationRule.sql" />
+    <Build Include="dbo\Views\vPTOneOnOneRevenue.sql" />
+    <Build Include="dbo\Views\vPKContactStaging.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValChildCenterUsageException.sql" />
+    <Build Include="dbo\Views\vValClubType.sql" />
+    <Build Include="dbo\Views\vValDiscountType.sql" />
+    <Build Include="dbo\Views\vGuest.sql" />
+    <Build Include="dbo\Views\vPKEmployerStaging.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValCommissionable.sql" />
+    <Build Include="dbo\Views\vValDiscountCombineRule.sql" />
+    <Build Include="dbo\Views\vValCommunicationPreference.sql" />
+    <Build Include="dbo\Views\vValDiscountApplicationType.sql" />
+    <Build Include="dbo\Views\vCardLevelPriceRange.sql" />
+    <Build Include="dbo\Views\vReportDimDate.sql" />
+    <Build Include="dbo\Views\vValContactType.sql" />
+    <Build Include="dbo\Views\vValCustomerType.sql" />
+    <Build Include="dbo\Views\vProduct.sql" />
+    <Build Include="dbo\Views\vPKPurchaserStaging.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValSalesPromotionType.sql" />
+    <Build Include="dbo\Views\vAuditQuery.sql" />
+    <Build Include="dbo\Views\vClubProductPriceTax.sql" />
+    <Build Include="dbo\Views\vPKMemberReimbursementStaging.sql" />
+    <Build Include="dbo\Views\vValCountry.sql" />
+    <Build Include="dbo\Views\vValProductSalesChannel.sql" />
+    <Build Include="dbo\Views\vValProgramIdentifierValidationClass.sql" />
+    <Build Include="dbo\Views\vCognos_ReplicationProcessing_LastCheckin.sql" />
+    <Build Include="dbo\Views\vPKMemberReimbursementProgramIdentifierPartStaging.sql" />
+    <Build Include="dbo\Views\vValDrawerAuditType.sql" />
+    <Build Include="dbo\Views\vValAssessmentDay.sql" />
+    <Build Include="dbo\Views\vSalesPromotion.sql" />
+    <Build Include="dbo\Views\vPKContactStagingLog.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValDrawerStatus.sql" />
+    <Build Include="dbo\Views\vValRecurrentProductHoldMonth.sql" />
+    <Build Include="dbo\Views\vSalesPromotionClub.sql" />
+    <Build Include="dbo\Views\vValEFTAccountType.sql" />
+    <Build Include="dbo\Views\vSalesPromotionSalesChannel.sql" />
+    <Build Include="dbo\Views\vClub.sql" />
+    <Build Include="dbo\Views\vEFTAccountProduct.sql" />
+    <Build Include="dbo\Views\vPKEmployerStagingLog.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValEFTBatchJob.sql" />
+    <Build Include="dbo\Views\vSalesPromotionCustomerEligibility.sql" />
+    <Build Include="dbo\Views\vValPricingMethod.sql" />
+    <Build Include="dbo\Views\vPTCreditcardTransaction.sql" />
+    <Build Include="dbo\Views\vPKMemberStagingLog.sql" />
+    <Build Include="dbo\Views\vValEFTBatchStatus.sql" />
+    <Build Include="dbo\Views\vPromotionClub.sql" />
+    <Build Include="dbo\Views\vPricingDiscount.sql" />
+    <Build Include="dbo\Views\vPKMembershipStagingLog.sql" />
+    <Build Include="dbo\Views\vValEFTOption.sql" />
+    <Build Include="dbo\Views\vValPromotionType.sql" />
+    <Build Include="dbo\Views\vPricingDiscountIncludeProduct.sql" />
+    <Build Include="dbo\Views\vPKPurchaserStagingLog.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValEFTStatus.sql" />
+    <Build Include="dbo\Views\vPricingDiscountExcludeProduct.sql" />
+    <Build Include="dbo\Views\vPKMemberReimbursementStagingLog.sql" />
+    <Build Include="dbo\Views\vPTProductGroupRevenue.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValEFTType.sql" />
+    <Build Include="dbo\Views\vValTimeZone.sql" />
+    <Build Include="dbo\Views\vTranItemDiscount.sql" />
+    <Build Include="dbo\Views\vGiftCardProduct.sql" />
+    <Build Include="dbo\Views\vPKMemberReimbursementProgramIdentifierPartStagingLog.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValSalesArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValSalesPromotionAttribute.sql" />
+    <Build Include="dbo\Views\vValEnrollmentType.sql" />
+    <Build Include="dbo\Views\vSalesPromotionAttribute.sql" />
+    <Build Include="dbo\Views\vValContractType.sql" />
+    <Build Include="dbo\Views\vValGLGroup.sql" />
+    <Build Include="dbo\Views\vValActivityAreaPreference.sql" />
+    <Build Include="dbo\Views\vCognos_ClubByMMSRegion.sql" />
+    <Build Include="dbo\Views\vGiftCardProductSequence.sql" />
+    <Build Include="dbo\Views\vValMIPCategory.sql" />
+    <Build Include="dbo\Views\vValActivityAreaSkill.sql" />
+    <Build Include="dbo\Views\vTranItemGiftCardIssuanceSequence.sql" />
+    <Build Include="dbo\Views\vMembership.sql" />
+    <Build Include="dbo\Views\vValMIPItem.sql" />
+    <Build Include="dbo\Views\vClubMerchantNumber.sql" />
+    <Build Include="dbo\Views\vMemberActivityAreaSkill.sql" />
+    <Build Include="dbo\Views\vClubProductSecuritySequence.sql" />
+    <Build Include="dbo\Views\vPKMemberStaging.sql" />
+    <Build Include="dbo\Views\vValMIPSubCategory.sql" />
+    <Build Include="dbo\Views\vTerminalArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vMemberActivityAreaPreference.sql" />
+    <Build Include="dbo\Views\vEFTAccountDetail.sql" />
+    <Build Include="dbo\Views\vPKMembershipStaging.sql" />
+    <Build Include="dbo\Views\vValMedicaProgram.sql" />
+    <Build Include="dbo\Views\vValBusinessArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vClubActivityAreaAgreement.sql" />
+    <Build Include="dbo\Views\vEFTBillingRequest.sql" />
+    <Build Include="dbo\Views\vMemberAudit.sql" />
+    <Build Include="dbo\Views\vValPOSPaymentTypeAccessType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValMemberType.sql" />
+    <Build Include="dbo\Views\vIGTerminal.sql" />
+    <Build Include="dbo\Views\vClubActivityAreaMemberUsage.sql" />
+    <Build Include="dbo\Views\vMembershipAudit.sql" />
+    <Build Include="dbo\Views\vPOSEmployeeRolePaymentTypeAccessType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vPTCreditCardTerminal.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValActivityAreaSkillCategory.sql" />
+    <Build Include="dbo\Views\vValPaymentType.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValMembershipSource.sql" />
+    <Build Include="dbo\Views\vValIGProfitCenter.sql" />
+    <Build Include="dbo\Views\vValProductStatus.sql" />
+    <Build Include="dbo\Views\vValWebOrderItemStatus.sql" />
+    <Build Include="dbo\Views\vValPTRCLArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vValMembershipStatus.sql" />
+    <Build Include="dbo\Views\vClubGLAccount.sql" />
+    <Build Include="dbo\Views\vWebCart.sql" />
+    <Build Include="dbo\Views\vValMembershipTypeFamilyStatus.sql" />
+    <Build Include="dbo\Views\vWebCartItem.sql" />
+    <Build Include="dbo\Views\vPKProductOverrideStaging.sql" />
+    <Build Include="dbo\Views\vValMembershipTypeGroup.sql" />
+    <Build Include="dbo\Views\vValWebOrderStatus.sql" />
+    <Build Include="dbo\Views\vValCommunicationPreferenceStatus.sql" />
+    <Build Include="dbo\Views\vPKProductOverrideStagingLog.sql" />
+    <Build Include="dbo\Views\vValMessageSeverity.sql" />
+    <Build Include="dbo\Views\vMMSTranNonArchive.sql" />
+    <Build Include="dbo\Views\vWebItem.sql" />
+    <Build Include="dbo\Views\vValCommunicationPreferenceSource.sql" />
+    <Build Include="dbo\Views\vDevice.sql" />
+    <Build Include="dbo\Views\vValMessageStatus.sql" />
+    <Build Include="dbo\Views\vWebItemTax.sql" />
+    <Build Include="dbo\Views\vValEmployeeLevelType.sql" />
+    <Build Include="dbo\Views\vValNamePrefix.sql" />
+    <Build Include="dbo\Views\vGuestCount.sql" />
+    <Build Include="dbo\Views\vWebOrder.sql" />
+    <Build Include="dbo\Views\vValEmployeeLevel.sql" />
+    <Build Include="dbo\Views\vValNameSuffix.sql" />
+    <Build Include="dbo\Views\vAgreement.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vWebOrderItem.sql" />
+    <Build Include="dbo\Views\vValAcquisitionType.sql" />
+    <Build Include="dbo\Views\vHRTrainerLevelMMSLevel.sql" />
+    <Build Include="dbo\Views\vAgreementTemplate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vWebOrderPaymentAuthorization.sql" />
+    <Build Include="dbo\Views\vValMailingListMIPItem.sql" />
+    <Build Include="dbo\Views\vValOwnershipType.sql" />
+    <Build Include="dbo\Views\vEmployeeLevel.sql" />
+    <Build Include="dbo\Views\vEFTPaymentAccount.sql" />
+    <Build Include="dbo\Views\vValPhoneType.sql" />
+    <Build Include="dbo\Views\vBankAccount.sql" />
+    <Build Include="dbo\Views\vMemberAssociation.sql" />
+    <Build Include="dbo\Views\vWebOrderMMSTran.sql" />
+    <Build Include="dbo\Views\vCorporatePartner.sql" />
+    <Build Include="dbo\Views\vValResourceType.sql" />
+    <Build Include="dbo\Views\vClubProductLevelPrice.sql" />
+    <Build Include="dbo\Views\vValPreSale.sql" />
+    <Build Include="dbo\Views\vBillingAddress.sql" />
+    <Build Include="dbo\Views\vValMemberAssociationType.sql" />
+    <Build Include="dbo\Views\vWebItemRequirement.sql" />
+    <Build Include="dbo\Views\vCorporatePartnerProgram.sql" />
+    <Build Include="dbo\Views\vMembershipInfo.sql" />
+    <Build Include="dbo\Views\vLTFResourceKey.sql" />
+    <Build Include="dbo\Views\vValRegion.sql" />
+    <Build Include="dbo\Views\vTranItemGiftCardIssuance.sql" />
+    <Build Include="dbo\Views\vValRelationshipType.sql" />
+    <Build Include="dbo\Views\vWebItemFeature.sql" />
+    <Build Include="dbo\Views\vCorporatePartnerProgramProduct.sql" />
+    <Build Include="dbo\Views\vCompany.sql" />
+    <Build Include="dbo\Views\vValScheduledJobType.sql" />
+    <Build Include="dbo\Views\vMemberAssociationAudit.sql" />
+    <Build Include="dbo\Views\vWebItemDiscount.sql" />
+    <Build Include="dbo\Views\vValRevenueReportingCategory.sql" />
+    <Build Include="dbo\Views\vCorporatePartnerProgramIdentifierFormatPart.sql" />
+    <Build Include="dbo\Views\vPromotion.sql" />
+    <Build Include="dbo\Views\vValSecurityGroup.sql" />
+    <Build Include="dbo\Views\vValSalesReportingCategory.sql" />
+    <Build Include="dbo\Views\vValMemberCardLetterType.sql" />
+    <Build Include="dbo\Views\vValServiceAccessCode.sql" />
+    <Build Include="dbo\Views\vChildCenterUsageException.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vActiveAssociateMemberships.sql" />
+    <Build Include="dbo\Views\vEmailTemplate.sql" />
+    <Build Include="dbo\Views\vValState.sql" />
+    <Build Include="dbo\Views\vClubActivityArea.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vReplicationTest.sql" />
+    <Build Include="dbo\Views\vCreditCardAccount.sql" />
+    <Build Include="dbo\Views\vEmailEvent.sql" />
+    <Build Include="dbo\Views\vReportDimProduct.sql" />
+    <Build Include="dbo\Views\vValStatementType.sql" />
+    <Build Include="dbo\Views\vClubAddress.sql" />
+    <Build Include="dbo\Views\vValMembershipModificationRequestStatus.sql" />
+    <Build Include="dbo\Views\vEFT.sql" />
+    <Build Include="dbo\Views\vEmailTemplateRule.sql" />
+    <Build Include="dbo\Views\vValReimbursementProgramProcessingType.sql" />
+    <Build Include="dbo\Views\vMMSRevenueReportSummary.sql" />
+    <Build Include="dbo\Views\vExerpManagedClubDepartment.sql" />
+    <Build Include="dbo\Views\vValTaxType.sql" />
+    <Build Include="dbo\Views\vClubAttribute.sql" />
+    <Build Include="dbo\Views\vClubEnrollmentType.sql" />
+    <Build Include="dbo\Views\vEFTChargeBack.sql" />
+    <Build Include="dbo\Views\vValReimbursementProgramType.sql" />
+    <Build Include="dbo\Views\vDSSRCashReductionSummary.sql" />
+    <Build Include="Security\Brio_Report.sql" />
+    <Build Include="Security\MMSPoolUser.sql" />
+    <Build Include="Security\Smartwebuser.sql" />
+    <Build Include="Security\MyPlanUser.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-REPORTING-EXECUTE.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-REPORTING-EXECUTE_1.sql" />
+    <Build Include="Security\ssis_exec.sql" />
+    <Build Include="Security\ssispooluser.sql" />
+    <Build Include="Security\Boss.sql" />
+    <Build Include="Security\PowerBiTempUser.sql" />
+    <Build Include="Security\LTFINC_Alteryxsvc.sql" />
+    <Build Include="Security\InformaticaUser.sql" />
+    <Build Include="Security\ReportMMS.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-SQLDev-Elevated.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-DataWarehouse-RO.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-DataWarehouse-RO_1.sql" />
+    <Build Include="Security\SelfServiceBI_POC.sql" />
+    <Build Include="Security\CognosAnalyticsUser.sql" />
+    <Build Include="Security\GISuser.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-SQLDev-RO.sql" />
+    <Build Include="Security\LTMDM_User.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-DataWarehouse-Elevated.sql" />
+    <Build Include="Security\BOSS_User.sql" />
+    <Build Include="Security\CognosSelfServiceUser.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-UDW-RO.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-UDW-RO_1.sql" />
+    <Build Include="Security\LTFINC_e220644.sql" />
+    <Build Include="Security\TeamMemberHubUser.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Reconciliation-RO.sql" />
+    <Build Include="Security\JumboPoolUser.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-LTSUITE-RO.sql" />
+    <Build Include="Security\CognosReader.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Sales-RO.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Marketing-RO.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Operations-RO.sql" />
+    <Build Include="Security\LTFINC_e9002794.sql" />
+    <Build Include="Security\ReportUser.sql" />
+    <Build Include="Security\LTFINC_clubaccesscon.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Reporting-RO.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-Reporting-RO_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\fnRevenueDepartmentDimReportingHierarchy_UDW.sql" />
+    <Build Include="dbo\Functions\fnRevenueDimReportingHierarchy_UDW.sql" />
+    <Build Include="dbo\Functions\fnRevenueDepartmentDimReportingHierarchy.sql" />
+    <Build Include="dbo\Functions\fnRevenueDimReportingHierarchy.sql" />
+    <Build Include="dbo\Functions\fnParsePipeList.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PTCloseoutTracker.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpReimbursement_Participation.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmpPosSec_PosSecGroup.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CorporatePartnershipAttrition.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_Revenue_Extract_ByRegion.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTRecoveryAnalysisByClub_ACHPage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetPartners_CorpFlex.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmployeeDuesAnalysis.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_SessionSummary_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTRecoveryAnalysisByClub_CreditCardPage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpUser_CorpFlex.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueProductGroup.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmployeeMemberID.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTRecoveryAnalysisByClubDetailDrillThrough.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_AnnualAllocation_Scheduled_Aquatics.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmployerReview.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_DeliveredMindBodySessions_MTD_AllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRecurringProductForecast.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_CommSls_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPackage_OutstandingSessions.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_GetEmpClubRole_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPackage_OutstandingSessions_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_Revenue_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_SessionsDelivered_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPendingTerminationMembersToSiebel.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCardFulfillment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetAcctRepInitials.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MembershipInformationDetail_JuniorDues.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPolarSales_Detail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsGetAllDepartmentProducts.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPosdrawer_AllocationOfTendered.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MemberContact.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptReimbursementProgram.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawer_NewPKMembers.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMipCategory.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MembershipMessage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCalcClosedMembershipsAllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptMMSDepartmentsWithPackageProducts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawer_POSDrawerDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailmyLTMemberSignUps.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetCoNameAcctRepMemStat.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMipUniqueMembers.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptEmployeeClubRole.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_Package_SalesDetail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ClubUsage_CheckInDetailsForToday.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawer_SelectedDrawerActivityID.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetCompanies.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ClubMembershipAudit.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClosedMembershipsAllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetRecurrentProductTypeProducts.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_Package_SessionsDetail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptClubByRegion.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawer_TenderedDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessDivisionProductGroupings.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetCompanyName.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_NPTChanges.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetRegionClub.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawerclosed_POSDrawerDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetCreditCardTerminalNames.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PosClosedDrawerTenderedDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetClubDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPosdrawerclosed_SelectedDrawerActivityID.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetDepartments.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptPOSClosedDrawerList.sql" />
+    <Build Include="dbo\Stored Procedures\procParseIntegerList.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPrepareCommissionableSalesSummaryData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetEmpClubRole_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PosClosedDrawer_AllocationOfTendered.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAttritionsAllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\procParseStringList.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPackage_Adjustments.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetEmployeeRoles.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpReimbursement_HistoryExport.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetEmpClubRole.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PosClosedDrawerDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareDSSRCashReductionSummary.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPackage_SalesDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetEmployees.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_ByRegion.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetEmployees_All.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCorpReimbursement_CreditBalance_Aging.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_RevenueAllocationCalcAndInsert.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetIFAddOnTransForCancellationAndDowngrade.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCorporateMembers.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_Generic.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PromptProductForClubDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareMMSClubProductRevenueSummary.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPrepareBCBSExportData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetIFAddOnTransForCancellationAndDowngrade1.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_TargetMarketingTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ApprovedEFTProductGroupDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareDestinyHealthExportData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMemberShipStatus.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipBalanceCheck.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_InvalidSessionTrackingFraud.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareDSSRSummaryData.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsGetMembershipMessageTypes.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductPaymentProblems.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_SessionsDelivered_Summary_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareMedicaExportData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMembershipStatusDescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipStatus_RecurrentProductStatus.sql" />
+    <Build Include="dbo\Stored Procedures\LTFCreateTableView.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductStatusDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailDiamondCounts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsProductGroups.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareReimbursementExportData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMembershipTypeDescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\Temp_mmsGetIFAddOnTransForCancellationAndDowngrade.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCorpUser_Memberusage_Scheduled_AdvantaHealth.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailHCSignUps.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptMembershipMessageTypes.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareRevenueSummaryData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMessageStatusDescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipTypeAgreementValidate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\eposBatchReports_BatchSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SingleMonthsAllocation_MTD_Aquatics_Obsolete.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_ALFLGANCNJNYTN.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMessageTypeDescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ChildCenter_Evacuation.sql" />
+    <Build Include="dbo\Stored Procedures\eposBatchReports_ClosedBatchStatus.sql" />
+    <Build Include="dbo\Stored Procedures\mmsUpdateMapInfoMembershipAddress.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRecurringProductAudit.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SingleMonthsAllocation_MTD_MA_Obsolete.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_AZILMONV.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetPaymentTypes.sql" />
+    <Build Include="dbo\Stored Procedures\eposBatchReports_DroppedTickets.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_COONMIUT.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_SixtyDayTracker.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsEmailmyLTSignUpTotals.sql" />
+    <Build Include="dbo\Stored Procedures\eposDailyDeposit_BatchCheck.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RevenueAndSalesTaxWorkdayGLPosting.sql" />
+    <Build Include="dbo\Stored Procedures\mms57DayNonUsageMembers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsTranItemRecCount.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsRecurringProductPaymentProblems_RecentTransactionsOnly.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPriceOverrideException.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_MNLifepower.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetProductStatus.sql" />
+    <Build Include="dbo\Stored Procedures\eposDailyDeposit_CardOnFile.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailMemberCount.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptRevenueReportingDepartments.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRepDx.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_TX.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetProfileItems.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailAdvisorSignupTotals.sql" />
+    <Build Include="dbo\Stored Procedures\eposExceptions_Rejections.sql" />
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_INOHMDNCVA.sql" />
+    <Build Include="dbo\Stored Procedures\mmsInternetPKMembershipCounts.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RevenueClubSummary_ByReportingDepartment_MMS.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_ALFLGANCNJNYTN.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetProfileSections.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_LTHealthCoachingCalls.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailClubAttritions.sql" />
+    <Build Include="dbo\Stored Procedures\procAlteryx_DelinquentMembershipBalanceSummary_Today.sql" />
+    <Build Include="dbo\Stored Procedures\eposExceptions_Undeliverable.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_AnnualAllocation.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_NonStatementClubs_INOHMDNCVA.sql" />
+    <Build Include="dbo\Stored Procedures\Obsolete_procCognos_RevenueAndSalesTaxGLPosting.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_AZ.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_AZILMONV.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailClubInterestCounts.sql" />
+    <Build Include="dbo\Stored Procedures\eposGetTerminalNames.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_GLPosting.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCalcClosedMemberships.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_AZ.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetMailingProgram_MemberInterestProfile.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_JuniorMemberList_DoNotAssessJuniorDues.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_AZVA.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_COONMIUT.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetRegions.sql" />
+    <Build Include="dbo\Stored Procedures\hyperiontest.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_RevenueAllocationCalc.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClosedMemberships.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberStatusSummary_Scheduled_TX_NJ_NY_FL_GA.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptMembershipType.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_IL.sql" />
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_MNLifepower.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetSecurityGroups.sql" />
+    <Build Include="dbo\Stored Procedures\mmsACHChargeBack.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberStatusSummary_Scheduled_IN_OH_MD_NC_VA.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_IL1.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery_NonStatementClubs_TX.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetTerminationReasons.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SalesSummary_History.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAttritions.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_Revenue_NJ_NY_FL_GA.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_IL2.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsExportCWUsageReportCityofMpls.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetTransactionTypes.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMaxTranItemID.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_Revenue_IN_OH_MD_NC_VA.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNPTChanges.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SingleMonthsAllocation_MTD_Tennis_Obsolete.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAgingDetail.sql" />
+    <Build Include="dbo\Stored Procedures\procAlteryx_DelinquentAgingBalanceSummaryByProductGroupMonthly.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MI.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetProductForClubDepartment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGiftCardIssuances_PaymenTech.sql" />
+    <Build Include="dbo\Stored Procedures\mmsAcctMgrProd.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PointOfSaleCloseDrawerPaymentMethodAndDistributionDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MN.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetmarket_TransactionDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGiftCardRedemptions_PaymenTech.sql" />
+    <Build Include="dbo\Stored Procedures\mmsAging.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MN1.sql" />
+    <Build Include="dbo\Stored Procedures\mmsHEFulfillment.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PackagesWithoutEFTExerpMigrationAudit.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetPaymentStatuses.sql" />
+    <Build Include="dbo\Stored Procedures\mmsAuditQuery.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MN2.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsIFDetail_Memberships.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsBatchReports_BatchSummary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MemberRelationsCheckRefundLog.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MN3.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Projection_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductDelinquentBalanceSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsIFDetail_Transactions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMindBody_OldBusiness.sql" />
+    <Build Include="dbo\Stored Procedures\mmsBatchReports_ClosedBatchStatus.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_MN4.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Projection_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MembersByEmailDomain.sql" />
+    <Build Include="dbo\Stored Procedures\mmsIFException_EnrollmentFeeException.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMembershipCommunication.sql" />
+    <Build Include="dbo\Stored Procedures\mmsBillable_memberships.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAging_MembershipDetailDrillThrough.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_TX.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_TX1.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_NonJunior_NewMember_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateReimbursementsAndUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsLS_DSSR_Revenue_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsAutomatedRefunds_Check_Refunds.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_NewMembershipEnrollment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_TX2.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsFitnessAndNutrition_Revenue_QTD.sql" />
+    <Build Include="dbo\Stored Procedures\mmsLS_DSSR_Revenue_MTD_AllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsAutomatedRefunds_Check_Refunds_scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCancelationReasons_Cancellations.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PT_DSSR_PenetrationSummary_ByClub_MMS.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetClubMembershipAdvisors_Obsolete.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMATotalMemberships.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCancelationReasons_FlaggedMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubTerminal.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptCompany.sql" />
+    <Build Include="dbo\Stored Procedures\procParseClubIDs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipBalanceValidate.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_MemberRelationsECPRefundLog.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDSSR_MembershipAttritionsAllClubs_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMATotalMembershipsAllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCancelationReasons_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsOfflineUndeliverableCreditCardAuthorizations.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateMemberUsage.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptPaymentStatus.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue_adhoc.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDSSR_CalcClosedMembershipsAllClubs_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMajorityusageexception_ClubMembershipSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCancelationReasons_SummaryByTermDate.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue_oldnew.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDSSR_TotalsAllClubs_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMajorityusageexception_SummaryCalc.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCancelationReasons_Terminations.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail_scheduled_AllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_TopRevenue_PT_Members_AdHoc.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsEmail_ToBeSent_MIP_DH_Emails.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMajorityusageexception_Usage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckinDetailBasic.sql" />
+    <Build Include="dbo\Stored Procedures\mmsSalesSummary_Revenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGuestCounter.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmail_Previous_MIP_DH_Emails.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMedicaEnrollmentAnalysis_NewTransferEligible.sql" />
+    <Build Include="dbo\Stored Procedures\mmsLoadtmpLTFUserIdentity.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsSportsMembershipSummary_MemberStatusSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SingleMonthsAllocation_MTD_AllDepts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMedicaProcessing_MemberRecord.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckin_Summary_Backup.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsSportsMembershipSummary_SportMembershipRollForward.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_AnnualAllocation_Scheduled_AllDepts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMedicaProcessing_NoSolicitationFlag.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckin_Summary_Old.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_ClubMemberCount.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMedicaProcessing_UsageDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckin_Summary_Test.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeferredNonDeferredRevenue.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_CompletePkg.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Nonterm_Memberships.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterExceptions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeferredNonDeferredRevenue_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_LTFSportUpgrade.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductForecast_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredNonDeferredRevenue_Historical.sql" />
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_MemberStatusSummary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptBOSSInterests.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled_AZ_IN_OH.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PromptReportingRevenueYearMonth_UDW.sql" />
+    <Build Include="dbo\Stored Procedures\mmsAutomatedRefunds_ECP_Refunds.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubProduct.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_Package_Adjustments.sql" />
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_MonthToDateJoins.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ExpectedRosterCancellations.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled_IL.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ChildCenterSwipe.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_Scheduled_RegionSet1.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_Package_OutstandingSessionsDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsSportsSched_RemainingForcedTempe.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareReimbursementProgramParticipationDetail_CalcAndInsert.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled_MI.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsNPT_Memberships_with_EFT_Updates_via_MyLT.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubDailySummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMipCategory_scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_Scheduled_RegionSet2.sql" />
+    <Build Include="dbo\Stored Procedures\mmsStatement_Message.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPrepareReimbursementProgramParticipationSummary_CalcAndInsert.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled_MN.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubUniqueUsageSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMipUniqueMembers_scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_Scheduled_RegionSet3.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetMailingProgram_MembershipCommunicationData.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetReimbursmentProgramParticipationMonthYear.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_Scheduled_TX_VA.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_RealTimeAssessmentDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailActivemyLTCount.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubUniqueUsageSummary_Scheduled.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsTodaysBusiness_Attritions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_CreditBalance_Scheduled_RegionSet1.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCommissionableSales.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTSummary_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsProgramParticipationSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemDetail_termMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptRegionClubForDepartmentAndDate_UDW.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PaymentTypes.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubUsageDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTodaysBusiness_NewMemberships.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_CreditBalance_Scheduled_RegionSet2.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetMailingProgram_UsageCounts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_ParticipationCounts.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptReportingDepartmentHierarchyForDate_UDW.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptMMSDepartmets.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPTInvalidSession.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_CreditBalance_Scheduled_RegionSet3.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCommissionableSales_chart.sql" />
+    <Build Include="dbo\Stored Procedures\mmsACHEFTRecovery.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemTranHist_IndividualMembership.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptReportingDepartmentHierarchyForYearMonth_UDW.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_AssessedDuesAndTaxCollectionDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_RegionalUsageSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTHistory.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTerminatedMembersToSiebel.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PT_DSSR_SessionStatisticsByClub.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_AssessedDuesAndTaxCollectionClubSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_Swipe.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberActivities_RevenueAllocation_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTHistory_ACHChargebacks.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_Swipe15Minute.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RevenueAndSalesTaxGLPosting_SolomonAndWorkday.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTSummary_scheduled_All.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpEFTTranHist_CorpEFTProjection.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCommissionableDepartments.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFTReturnDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTodaysBusiness_POSTransactions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_ClimbingWallUsage_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCommissionableEmployees.sql" />
+    <Build Include="dbo\Stored Procedures\mmsProjectedEFT_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTopMembership_DetailTopMembershipRevenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsProjectedEFT_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberAdvisor_MembershipMaint.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEFT_Expiration_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTotalEmailMemberships_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberByAgeRange_21Usage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCommissionableSales_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_CreditBalance_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTrackMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberByAgeRange_NoUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberContact.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPTRevenueLoad.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ClientRetention_TeamMemberHireDate.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_TotalHealthCoachingCalls.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetMailingProgram_ProductPurchases.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberInterestProfile_InterestList.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpEFTTranHist_CorpEFTTranHistory.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptCreditCardTerminalNames.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateSalesEngagement.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDailydeposit_BatchCheck.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberInterestProfile_MemberInfo.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpNewMbShip_NewMembers.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DrawerClosingStatus.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAging_MembershipDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDailydeposit_DrawerCheck.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranddt_Trandt.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberMessage_EmployeeIDSearch.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_PRWorksheet_FromExtractTable.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_ClosedBatchStatus.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTCompanySummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDailyDeposit_CardOnFile.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranddt_Trandt_TopTrainersAdHoc.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberMessage_MessageOpenedBy.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RealTimeClubDetailSalesByReportingDepartment_Today_DrillThrough.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubList.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDailydeposit_DepositListing.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MembershipDelinquentStatement.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranddt_Trandt_original.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberMessage_MessageStatus.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckin_Summary_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RealTimeClubDetailSalesByReportingDepartmentDrillThrough.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MembershipInformationDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberMessage_MessageType.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpReimbursement_Program.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubUsageSummary_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RealTimeSalesByReportingDepartment_MMS_Today.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGetMMSDepartmentsWithPackageProducts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsValidateReplicationData.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procWorkday_EFTSummary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_QualifiedDuesMembershipReport.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpUser_Memberusage.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RevenueClubSummary_RealTimeSalesByReportingDepartment_MMS.sql" />
+    <Build Include="dbo\Stored Procedures\mmsVoidedTransactions_POSDrawerDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_AuditReport.sql" />
+    <Build Include="dbo\Stored Procedures\mmsChildCenter_OccupancySummary.sql" />
+    <Build Include="dbo\Stored Procedures\testProcedure.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_JuniorMember.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTProjectedSummaryByClub.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCorpprodsum_ProductionSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail_Scheduled_RegionSet1.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranBalInsert.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_NoBirthDate.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTProjectedMembershipDetailDrillThrough.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsCorpprodsum_ProductionSummary_old.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail_Scheduled_RegionSet2.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranddt_Trandt_ByRegion.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_PartnerMember.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCorpprodsum_ProductionSummary_original.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail_Scheduled_RegionSet3.sql" />
+    <Build Include="dbo\Stored Procedures\procEmployeeChanges.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Detail_ByRegion.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_PrimaryMember.sql" />
+    <Build Include="dbo\Stored Procedures\mmsCreateHouseAccount.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsNPTMembershipsList.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_SecondaryMember.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSRMembershipTypeGroup.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMembershipAudit_AuditReport_scheduled_AllClubs.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PointOfSaleCloseDrawerPaymentMethodAndDistributionSummary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CardFulfillment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_Revenue_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_TodaysBusinessMembershipCount.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAging_PaymentsAndAdjustments_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDecliningMembershipClubUsage.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAgingDashboard_SourceOfMTDCollection.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNewMembermyLTEmail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_OldBusiness.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ProjectedEFTTransactions_CorporateMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ReplicationProcessingLastCheckIn.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue_PriorMonth.sql" />
+    <Build Include="dbo\Stored Procedures\procExtractWorkdayEFTSummaryFile.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranddt_Trandt_HouseAccount.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_DelinquentAgingDashboard_CollectionsMTDByProductCategory.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipCommunicationPreference.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_SingleMonthsAllocation.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_FunctionalCallListDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_CashReductions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPackage_SessionsDetail_SessionsDelivered_scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTargetMailingProgram_NewMemberLowUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipComposition.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_FunctionalCallList_ClubSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_CashReductionsAllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsGetCompaniesAndQualifiedSalesPromotions.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipCompositionSummary_MembershipLength.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNonusage_NoAttendance.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_ClosedMemberships.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_Revenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipCompositionSummary_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRecurringProductPaymentProblems.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_ClosedMembershipsAllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipPhoneNumbers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_AutomatedRefunds_OriginalRefundClubDifference.sql" />
+    <Build Include="dbo\Stored Procedures\mmsTranBalanceInsert.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipStatus_Cancellations.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_AutomatedRefunds_Adjustments.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_MembershipAttritions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsTranBalanceJobValidate.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMembershipTypesAnalysis_ClubSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_NewMemberCount.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsPTCombinedRevenueExract.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_MemberCounts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRecurrentProductDetail_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_SportsNonAccess.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTReturnAndACHChargeBackDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_SportsNonAccessAllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_Totals.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_Corp.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailCardOnFileCafeUsage.sql" />
+    <Build Include="dbo\Stored Procedures\ProcCognos_LTW_ConferenceRooms.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_Corp_Healthcare.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDSSR_ZeroIF.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_IL.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDailiydeposit_ClosedDrawers.sql" />
+    <Build Include="dbo\Stored Procedures\mmsGiftCardIssuances_POS.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_MI.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailDuplicateCCsInEFTAccount.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Scheduled_MN.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ChildCenter_OccupancySummary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductForecastDetail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptForecastAssessmentDates.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RecurrentProductAudit_Obsolete.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PrepareMMSGLRevenuePostingDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberstatussummary_scheduled_MemberCounts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDelinquentstmt_Aging.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PrepareMMSGLRevenuePostingDetail_HistoricalLoad.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMindBodyProductGroups.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailCWEFTReport.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDelinquentstmt_StatementMessage.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MMSGLRevenuePostingDetail.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMonthly_Statement.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPurgeAccount_MembershipList.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CreditBalanceAging.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNPTAnalysis.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_del.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_MemberInformationDetail.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateReimbursementAndSubsidyTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailVouchers.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_NPTMembershipsWithEFTUpdatesViaMyLT.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPromptForecastAssessmentDates.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_EFTTransactionHistory.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNonusage_NoAttendance_new.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueGLPosting_AutomatedRefunds_GiftCardRefunds.sql" />
+    <Build Include="dbo\Stored Procedures\OBSOLETE_mmsDeliquent_stmt_club.sql" />
+    <Build Include="dbo\Stored Procedures\mmsMemberActivities_GLPosting.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateMembershipCompensation.sql" />
+    <Build Include="dbo\Stored Procedures\mmsNonusage_NoAttendance_original.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailCWUsageReport.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDepartmentProgram_Revenue_Qrtly.sql" />
+    <Build Include="dbo\Stored Procedures\OBSOLETE_mmsDeliquent_stmt_msg.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_LuLuLemonGuestVisits.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PromptBDM.sql" />
+    <Build Include="dbo\Stored Procedures\mmsOverShort_EIS_OverShortClosing.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDrawerAmountCalc.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_LuLuLemonVisits.sql" />
+    <Build Include="dbo\Stored Procedures\mmsOverShort_w_AuditPreprocess.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procAlteryx_OnLineMemberships_MTD_Append.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenuerpt_Revenue_MTD_Tennis.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_AssessmentSummary_Historical2.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPKvsDataEntry.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_SNSStop.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ChildCenter_OccupancySnapshotDetail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_NewMembershipsWithPaymentType.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPTRevenueExract.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDeferredRevenueDept_AllProducts.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDeliquent_Aging_NPT.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_ClubUsage.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_ChildCenter_CheckedInOverTwoHours.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessAndNutrition_Revenue_MTD.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_CommissionableSales_MTD_AllClubs.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_PT_DSSR_Summary_PenetrationSummary_ByClub_MMS.sql" />
+    <Build Include="dbo\Stored Procedures\mmsFitnessProgram_RevenueToday.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CreditCardRefundAudit.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_DeliveredBodyAgeSessions_MTD.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_CorporateMembershipList.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_DeliveredBodyAgeSessions_MTD_AllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsEFTRecovery_StatementClubs.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_ClubProductAndPriceList.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_CancellationReasonDetail_ContactInformationFile.sql" />
+    <Build Include="dbo\Stored Procedures\Obsolete_procCognos_MMSGLRevenuePostingDetail_20130220.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_DeliveredSessions_MTD_AllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_TransactionClubDetailByTransactionType.sql" />
+    <Build Include="dbo\Stored Procedures\mmsClubUsageStat_ClubUsageSummary.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_MemberCounts.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsELSubscription_ClubSummaryCount.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsMemberStatusSummary_Scheduled_Canada.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_RevenueAndSalesTaxGLPosting.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailNewCorporateFlexMembers.sql" />
+    <Build Include="dbo\Stored Procedures\mmsELSubscription_MailingList.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsChildCenterCheckin_Summary.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\mmsDuesAssessment_Collection.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_PriorMonthRejoins.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_PT_DSSR_OldAndNewBusinessSummaryByClub.sql" />
+    <Build Include="dbo\Stored Procedures\procCognos_AssessmentSummary_Historical.sql" />
+    <Build Include="dbo\Stored Procedures\mmsRevenueglposting_Revenue_Canada.sql" />
+    <Build Include="dbo\Stored Procedures\mmsPT_DSSR_Revenue_MTD_AllClubs.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_ProjectedClubDuesAssessmentSummaryByMembershipType.sql" />
+    <Build Include="dbo\Stored Procedures\mms30DayMembershipClubUsage.sql" />
+    <Build Include="dbo\Stored Procedures\mmsUpdateBrioEvnt.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\procCognos_ProjectedClubDuesAssessmentByMembershipTypeDetailDrillThrough.sql" />
+    <Build Include="dbo\Stored Procedures\mmsDepartmentProgram_Revenue.sql" />
+    <Build Include="dbo\Stored Procedures\mmsEmailPenetration_Obsolete.sql" />
+    <Build Include="Security\BOSS_User_1.sql" />
+    <Build Include="Security\Brio_Report_1.sql" />
+    <Build Include="Security\GISuser_1.sql" />
+    <Build Include="Security\InformaticaUser_1.sql" />
+    <Build Include="Security\LTFINC_Alteryxsvc_1.sql" />
+    <Build Include="Security\LTFINC_clubaccesscon_1.sql" />
+    <Build Include="Security\LTFINC_e220644_1.sql" />
+    <Build Include="Security\LTFINC_e9002794_1.sql" />
+    <Build Include="Security\LTFINC_SEC-DB-REPORTING-EXECUTE_2.sql" />
+    <Build Include="Security\MMSPoolUser_1.sql" />
+    <Build Include="Security\Smartwebuser_1.sql" />
+  </ItemGroup>
+</Project>

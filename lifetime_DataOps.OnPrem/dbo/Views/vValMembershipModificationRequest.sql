@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValMembershipModificationRequest AS 
+SELECT ValMembershipModificationRequestID,Description,SortOrder,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ValMembershipModificationRequest WITH(NOLOCK)

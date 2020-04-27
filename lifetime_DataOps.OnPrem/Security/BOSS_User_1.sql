@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [BOSS_User]
+    AUTHORIZATION [BOSS_User];
+

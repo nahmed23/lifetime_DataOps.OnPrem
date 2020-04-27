@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValProgramIdentifierValidationClass AS 
+SELECT ValProgramIdentifierValidationClassID,Description,Class,SortOrder,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ValProgramIdentifierValidationClass WITH(NOLOCK)

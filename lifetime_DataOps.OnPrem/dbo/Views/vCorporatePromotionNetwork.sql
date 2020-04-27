@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vCorporatePromotionNetwork AS 
+SELECT CorporatePromotionNetworkID,QualifiedSalesPromotionID,IPAddressMask,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.CorporatePromotionNetwork WITH(NOLOCK)

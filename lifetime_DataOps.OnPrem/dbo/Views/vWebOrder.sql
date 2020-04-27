@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vWebOrder AS 
+SELECT WebOrderID,PartyEncryptionID,ValProductSalesChannelID,PlacedOrderTotal,RevisedOrderTotal,BalanceDue,PlacedDateTime,RevisedDateTime,IPAddress,ExpirationDateTime,ValWebOrderStatusID
+FROM MMS_Archive.dbo.WebOrder WITH(NOLOCK)

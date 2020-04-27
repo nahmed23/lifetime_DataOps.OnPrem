@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValRecurrentProductTerminationReason AS 
+SELECT ValRecurrentProductTerminationReasonID,Description,SortOrder
+FROM MMS.dbo.ValRecurrentProductTerminationReason WITH (NoLock)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vKidsPlayCheckIn AS 
+SELECT KidsPlayCheckInID,ChildCenterUsageID,KidsPlayCheckinDateTime,UTCKidsPlayCheckinDateTime,KidsPlayCheckinDateTimeZone,InsertedDatetime,UpdatedDateTime
+FROM MMS_Archive.dbo.KidsPlayCheckIn WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [MMSPoolUser]
+    AUTHORIZATION [MMSPoolUser];
+

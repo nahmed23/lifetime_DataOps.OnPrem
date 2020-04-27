@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProgramNetworkEligibleMemberDate AS 
+SELECT ProgramNetworkEligibleMemberDateID,ProgramNetworkEligibleMemberID,FromDateTime,ThruDateTime,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ProgramNetworkEligibleMemberDate WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vReimbursementProgramNotification AS 
+SELECT ReimbursementProgramNotificationID,ReimbursementProgramID,Email,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ReimbursementProgramNotification WITH(NOLOCK)

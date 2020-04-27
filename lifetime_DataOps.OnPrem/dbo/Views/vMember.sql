@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMember AS 
+SELECT MemberID,MembershipID,EmployerID,FirstName,MiddleName,LastName,DOB,Gender,SSN,ActiveFlag,HasMessageFlag,JoinDate,Comment,ValMemberTypeID,InsertedDateTime,ValNamePrefixID,ValNameSuffixID,EmailAddress,CreditCardAccountID,ChargeToaccountFlag,CWMedicaNumber,CWEnrollmentDate,CWProgramEnrolledFlag,MIPUpdatedDateTime,SiebelRow_ID,UpdatedDateTime,PhotoDeleteDateTime,Salesforce_Prospect_ID,MemberToken,Party_ID,LastUpdatedEmployeeID,Salesforce_Contact_ID,AssessJrMemberDuesFlag,CRMContactID
+FROM MMS.dbo.Member WITH(NOLOCK)

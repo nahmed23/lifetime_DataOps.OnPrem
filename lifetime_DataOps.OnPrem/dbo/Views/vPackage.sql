@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPackage AS 
+SELECT PackageID,MemberID,MembershipID,ClubID,NumberOfSessions,PricePerSession,EmployeeID,ValPackageStatusID,MMSTranID,ProductID,TranItemID,CreatedDateTime,UTCCreatedDateTime,CreatedDateTimeZone,SessionsLeft,BalanceAmount,InsertedDateTime,UpdatedDateTime,PackageEditedFlag,PackageEditDateTime,UTCPackageEditDateTime,PackageEditDateTimeZone,ExpirationDateTime,UnexpireCount,LastUnexpiredDateTime,TransactionSource,ExternalPackageID,OriginalBalanceAmount
+FROM MMS_Archive.dbo.Package WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vBundleSubProduct AS 
+SELECT BundleSubProductID,BundleProductID,SubProductID,BundleProductGroupNumber,Quantity,GLAccountNumber,GLSubAccountNumber,GLOverRideClubID,ValGLGroupID,InsertedDateTime,UpdatedDateTime,WorkdayAccount,WorkdayCostCenter,WorkdayOffering,WorkdayOverRideRegion,WorkdayRevenueProductGroupAccount
+FROM MMS.dbo.BundleSubProduct WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vRefundMembershipSubtractItem AS 
+SELECT RefundMembershipSubtractItemID,MMSTranRefundID,OriginalTranItemID,Description,ItemAmount
+FROM MMS_Archive.dbo.RefundMembershipSubtractItem WITH(NOLOCK)

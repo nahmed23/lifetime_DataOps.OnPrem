@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vHRTrainerLevelMMSLevel AS 
+SELECT HRTrainerLevelMMSLevelID,HRTrainerLevel,ValEmployeeLevelID,ValEmployeeLevelTypeID,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.HRTrainerLevelMMSLevel WITH(NOLOCK)

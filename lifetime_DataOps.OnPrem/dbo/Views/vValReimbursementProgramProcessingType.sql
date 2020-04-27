@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValReimbursementProgramProcessingType AS 
+SELECT ValReimbursementProgramProcessingTypeID,Description,SortOrder,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ValReimbursementProgramProcessingType WITH(NOLOCK)

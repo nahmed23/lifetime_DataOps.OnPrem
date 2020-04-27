@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vThirdPartyPOSPayment AS 
+SELECT ThirdPartyPOSPaymentID,ValPaymentStatusID,OfflineAuthFlag,LTFTranDateTime,UTCLTFTranDateTime,LTFTranDateTimeZone,POSTranDateTime,UTCPOSTranDateTime,POSTranDateTimeZone,POSUniqueTranID,POSUniqueTranIDLabel
+FROM MMS.dbo.ThirdPartyPOSPayment WITH(NOLOCK)

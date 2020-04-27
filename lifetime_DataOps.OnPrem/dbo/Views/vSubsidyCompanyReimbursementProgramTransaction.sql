@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSubsidyCompanyReimbursementProgramTransaction AS 
+SELECT SubsidyCompanyReimbursementProgramTransactionID,SubsidyCompanyReimbursementProgramID,LTFCalculatedFlag,RecordsProcessed,BatchNumber,InvalidCount,DuplicateCount,CreditOnlyCount,AddUpdateCount,RemoveCount,NotEligibleCount,ProcessedDateTime,InsertedDateTime,UpdatedDateTime,UsageNotMetCount
+FROM MMS.dbo.SubsidyCompanyReimbursementProgramTransaction WITH(NOLOCK)

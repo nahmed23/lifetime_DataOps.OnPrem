@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSubsidyCompanyReimbursementProgramNotEligible AS 
+SELECT SubsidyCompanyReimbursementProgramNotEligibleID,SubsidyCompanyReimbursementProgramID,MemberID,DuesMonth,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.SubsidyCompanyReimbursementProgramNotEligible WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValPTRCLArea AS 
+SELECT ValPTRCLAreaID,Description,SortOrder
+FROM MMS.dbo.ValPTRCLArea WITH(NOLOCK)

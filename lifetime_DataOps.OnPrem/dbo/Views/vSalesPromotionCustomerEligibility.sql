@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSalesPromotionCustomerEligibility AS 
+SELECT SalesPromotionCustomerEligibilityID,ValCustomerTypeID,SalesPromotionID,ValMembershipTypeGroupID,MembershipTypeID,InsertedDateTime,UpdatedDateTime,ReimbursementProgramID
+FROM MMS.dbo.SalesPromotionCustomerEligibility WITH(NOLOCK)

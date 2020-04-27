@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValCommunicationPreferenceStatus AS 
+SELECT ValCommunicationPreferenceStatusID,Description,SortOrder,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ValCommunicationPreferenceStatus WITH(NOLOCK)

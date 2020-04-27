@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vReimbursementProgram AS 
+SELECT ReimbursementProgramID,ReimbursementProgramName,ActiveFlag,InsertedDateTime,UpdatedDateTime,DuesSubsidyAmount,CompanyID,ValReimbursementProgramProcessingTypeID,ValReimbursementProgramTypeID,LTFKeyID
+FROM MMS.dbo.ReimbursementProgram WITH(NOLOCK)

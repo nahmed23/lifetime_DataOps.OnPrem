@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMembershipOfferingSalesChannel AS 
+SELECT MembershipOfferingSalesChannelID,ValProductSalesChannelID,MembershipOfferingID,EffectiveFromDateTime,EffectiveThruDateTime,InsertedDateTime,UpdatedDateTime,AvailableAtAllClubsFlag,QualifiedSalesPromotionID,IncludeExcludeClubsFlag
+FROM MMS.dbo.MembershipOfferingSalesChannel WITH(NOLOCK)

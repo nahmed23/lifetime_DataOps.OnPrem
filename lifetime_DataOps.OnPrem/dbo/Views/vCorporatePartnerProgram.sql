@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vCorporatePartnerProgram AS 
+SELECT CorporatePartnerProgramID,CorporatePartnerID,ProgramName,ReimbursementProgramID,ReimbursementProgramIdentifierFormatID,EffectiveFromDateTime,EffectiveThruDateTime
+FROM MMS.dbo.CorporatePartnerProgram WITH(NOLOCK)

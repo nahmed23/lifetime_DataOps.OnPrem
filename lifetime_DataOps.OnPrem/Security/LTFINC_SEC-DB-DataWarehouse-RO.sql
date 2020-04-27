@@ -1,0 +1,2 @@
+﻿CREATE USER [LTFINC\SEC-DB-DataWarehouse-RO] FOR LOGIN [LTFINC\SEC-DB-DataWarehouse-RO];
+

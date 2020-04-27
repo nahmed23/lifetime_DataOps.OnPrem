@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProductWelcomeEmail AS 
+SELECT ProductWelcomeEmailID,ProductID,ProductSource,FirstTimeOnlyFlag,SendPrimaryFlag,SendPartnerFlag,SendMemberFlag,AccessEmailName,NoAccessEmailName,EffectiveStartDateTime,EffectiveEndDateTime,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ProductWelcomeEmail WITH(NOLOCK)

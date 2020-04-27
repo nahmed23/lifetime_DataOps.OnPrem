@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMIPCategoryItemDepartmentUnit AS 
+SELECT MIPCategoryItemDepartmentUnitID,DepartmentUnitID,MIPCategoryItemID,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.MIPCategoryItemDepartmentUnit WITH(NOLOCK)

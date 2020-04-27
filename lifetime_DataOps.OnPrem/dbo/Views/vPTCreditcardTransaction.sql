@@ -1,0 +1,10 @@
+﻿
+CREATE VIEW [dbo].[vPTCreditcardTransaction] AS 
+SELECT PTCreditCardTransactionID,PTCreditCardBatchID,TranSequenceNumber,TransactionCode,EntryDataSource,AccountNumber,
+ExpirationDate,TranAmount,ReferenceCode,TipAmount,EmployeeID,MemberID,CardHolderStreetAddress,CardHolderZipCode,TransactionDateTime,
+UTCTransactionDateTime,TransactionDateTimeZone,TransactionAmountChangedFlag,IndustryCode,AuthorizationNetWorkID,AuthorizationSource,AuthorizationCode,
+AuthorizationResponseMessage,CardType,VoidedFlag,CardOnFileFlag,InsertedDateTime,MaskedAccountNumber,UpdatedDateTime,MaskedAccountNumber64,PaymentID,CardHolderName,
+TypeIndicator,ThirdPartyPOSPaymentID,PrepaidTransactionIndicator,ECommerceGoodsIndicator,POSRetrievalReferenceNumber,RequestedAmount,PrepaidCardBalance,InvoiceNumber,
+SalesTaxAmount,CardSubType,HbcPaymentFlag,Signature,EFTAccountFlag,Token
+FROM MMS_Archive.dbo.PTCreditCardTransaction WITH(NOLOCK)
+

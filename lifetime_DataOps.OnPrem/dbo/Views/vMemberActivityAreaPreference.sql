@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberActivityAreaPreference AS 
+SELECT MemberActivityAreaPreferenceID,ValActivityAreaPreferenceID,MemberID,PreferenceValue,EmployeeID
+FROM MMS.dbo.MemberActivityAreaPreference WITH(NOLOCK)

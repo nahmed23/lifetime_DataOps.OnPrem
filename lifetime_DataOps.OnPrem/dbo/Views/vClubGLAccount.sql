@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vClubGLAccount AS 
+SELECT ClubGLAccountID,ClubID,ValCurrencyCodeID,GLCashEntryCompanyName,GLCashEntryAccount,GLReceivablesEntryAccount,GLCashEntryCashSubAccount,GLCashEntryCreditCardSubAccount,GLReceivablesEntrySubAccount,GLReceivablesEntryCompanyName,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ClubGLAccount WITH(NOLOCK)

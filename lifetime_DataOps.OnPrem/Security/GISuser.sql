@@ -1,0 +1,3 @@
+﻿CREATE USER [GISuser] FOR LOGIN [GISUser]
+    WITH DEFAULT_SCHEMA = [GISuser];
+

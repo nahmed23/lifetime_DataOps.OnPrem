@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSalesPromotionCode AS 
+SELECT SalesPromotionCodeID,SalesPromotionID,MemberID,PromotionCode,ExpirationDate,UsageLimit,NotifyEmailAddress,NumberOfCodeRecipients,InsertedDateTime,UpdatedDateTime,DisplayUIFlag
+FROM MMS.dbo.SalesPromotionCode WITH(NOLOCK)

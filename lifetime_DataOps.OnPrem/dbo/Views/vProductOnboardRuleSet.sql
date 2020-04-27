@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProductOnboardRuleSet AS 
+SELECT ProductOnboardRuleSetID,ProductOnboardSetProductID,ProductOnboardRuleID,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ProductOnboardRuleSet WITH(NOLOCK)

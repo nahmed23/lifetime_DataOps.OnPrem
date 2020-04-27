@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberUsageNightClub AS 
+SELECT MemberUsageNightClubID,ClubID,MemberID,UsageDateTime,UTCUsageDateTime,UsageDateTimeZone,InsertedDateTime,UpdatedDateTime,CheckinDelinquentFlag,DepartmentID,LTFKeyOwnerID
+FROM MMS.dbo.MemberUsageNightClub WITH(NOLOCK)

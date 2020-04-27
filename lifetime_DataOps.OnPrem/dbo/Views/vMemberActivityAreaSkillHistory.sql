@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberActivityAreaSkillHistory AS 
+SELECT MemberActivityAreaSkillHistoryID,ValActivityAreaSkillID,MemberID,AssignedDateTime,UTCAssignedDateTime,AssignedDateTimeZone,ExpirationDateTime,UTCExpirationDateTime,ExpirationDateTimeZone,EmployeeID,ClimberNotes
+FROM MMS.dbo.MemberActivityAreaSkillHistory WITH(NOLOCK)

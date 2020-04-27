@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vPricingDiscount AS 
+SELECT PricingDiscountID,SalesPromotionID,ValDiscountTypeID,DiscountValue,ValDiscountApplicationTypeID,ValDiscountCombineRuleID,AvailableForAllProductsFlag,AllProductsDiscountUseLimit,InsertedDateTime,UpdatedDateTime,SalesCommissionPercent,ServiceCommissionPercent,EffectiveFromDateTime,EffectiveThruDateTime,Description,MustBuyAllFlag,BundleDiscountFlag,ProductAddedFromDate,ProductAddedToDate
+FROM MMS.dbo.PricingDiscount WITH(NOLOCK)

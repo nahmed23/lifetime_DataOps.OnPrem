@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vInitiationFee AS 
+SELECT InitiationFeeID,ClubID,RateCardPrice,GMFloor,CorporateFloor,InternetRate,DefaultMedicaRate,StartDate,EndDate,InsertedDateTime,UpdatedDateTime,AddOn,Express,Bronze,Gold,Platinum,Onyx,OnyxJrExec,Diamond,DiamondExec,ProcessingFeeFlag,AdminFeeSingle,AdminFeeCouple,AdminFeeFamily,DisplayAdminFeeFlag,ValEnrollmentPricingMethodID,DiamondPremier,OnyxLimited,OnyxPremier
+FROM MMS.dbo.InitiationFee WITH(NOLOCK)

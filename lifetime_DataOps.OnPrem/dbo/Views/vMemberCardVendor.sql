@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMemberCardVendor AS 
+SELECT MemberCardVendorID,ValCardLevelID,ValMembershipTypeAttributeID,VendorCardValue,PriorityOrder,VendorCardDescription,EffectiveFromDateTime,EffectiveThruDateTime,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.MemberCardVendor WITH(NOLOCK)

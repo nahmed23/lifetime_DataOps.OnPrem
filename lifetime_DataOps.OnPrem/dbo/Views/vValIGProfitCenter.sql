@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vValIGProfitCenter AS 
+SELECT ValIGProfitCenterID,Description,ProfitCenterNumber,SortOrder,InsertedDateTime,UpdatedDateTime,ClubID,AutoReconcileTipsFlag,ValProductSalesChannelID
+FROM MMS.dbo.ValIGProfitCenter WITH(NOLOCK)

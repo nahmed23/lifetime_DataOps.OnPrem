@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vProductOnboardSet AS 
+SELECT ProductOnboardSetID,Description,AllMembersFlag,AllowJuniorMembersFlag,ValSalesPromotionAttributeID,CorporatePartnerID,MinimumAge,InsertedDateTime,UpdatedDateTime
+FROM MMS.dbo.ProductOnboardSet WITH(NOLOCK)

@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vDevice AS 
+SELECT DeviceID,DeviceName,DnsipAddress,DomainNamePrefix,CheckinEnabled,ViewMembersEnabled,ClubPOSTerminalLocation,ChildCenterEnabled,ClimbingWallEnabled,WebCameraEnabled,CardPrinterEnabled,InsertedDateTime,UpdatedDateTime,LTWorkCheckinEnabled
+FROM MMS.dbo.Device WITH(NOLOCK)

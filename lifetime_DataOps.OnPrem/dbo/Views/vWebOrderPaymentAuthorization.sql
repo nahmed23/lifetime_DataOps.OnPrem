@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vWebOrderPaymentAuthorization AS 
+SELECT WebOrderPaymentAuthorizationID,WebOrderID,PTCreditCardTransactionID,PTStoredValueCardTransactionID,InsertedDateTime,UpdatedDateTime,CreditPromotionCode
+FROM MMS_Archive.dbo.WebOrderPaymentAuthorization WITH(NOLOCK)

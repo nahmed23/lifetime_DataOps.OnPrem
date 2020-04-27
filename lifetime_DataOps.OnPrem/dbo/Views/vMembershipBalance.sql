@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vMembershipBalance AS 
+SELECT MembershipBalanceID,MembershipID,CurrentBalance,EFTAmount,StatementBalance,AssessedDateTime,StatementDateTime,PreviousStatementBalance,PreviousStatementDateTime,CommittedBalance,InsertedDateTime,UpdatedDateTime,ResubmitCollectFromBankAccountFlag,CommittedBalanceProducts,CurrentBalanceProducts,EFTAmountProducts
+FROM MMS.dbo.MembershipBalance WITH(NOLOCK)

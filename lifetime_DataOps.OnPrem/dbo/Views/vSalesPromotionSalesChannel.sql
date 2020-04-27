@@ -1,0 +1,3 @@
+﻿CREATE VIEW dbo.vSalesPromotionSalesChannel AS 
+SELECT SalesPromotionSalesChannelID,SalesPromotionID,ValProductSalesChannelID
+FROM MMS.dbo.SalesPromotionSalesChannel WITH(NOLOCK)

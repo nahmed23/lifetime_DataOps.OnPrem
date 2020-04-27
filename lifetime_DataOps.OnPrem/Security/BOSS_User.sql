@@ -1,0 +1,3 @@
+﻿CREATE USER [BOSS_User] FOR LOGIN [boss_user]
+    WITH DEFAULT_SCHEMA = [BOSS_User];
+
